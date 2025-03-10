@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: white;
+    background-color: #E8F0FE;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #374151;
+    text-align: center;
+}
+nav{
+    position: static;
+    background: white;
+    width: 100%;
+}
+nav .main{
+    max-width: 1650px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+nav .main .logo img{
+    height: 145px;
+    width: 150px;
+    padding-top: 15px;
+}
+.logo {
+    height: 70px;
+    transition: transform 0.3s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+nav .main ul{
+    padding-right: 20px;
+    list-style: none;
+    display: inline-flex;
+    
+}
+.main ul li a{
+    text-decoration: none;
+    padding: 8px;
+    line-height: 150px;
+    color: black;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 240;
+    transition: all o.5s ease;
+}
+.main ul li a:hover{
+    background-color: black;
+    color: white;
+}
+marquee{
+    border: 2px;
+    background-color: #004080;
+    line-height: 40px;
+    color: white;
+    font-size: 1rem;
+}
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    border: 1px solid #D1D5DB;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    width: 60px;
+    margin-right: 15px;
+}
+
+h2 {
+    color: #1E293B;
+    border-bottom: 2px solid #3B82F6;
+    padding-bottom: 8px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.info-section,
+.venue,
+.map {
+    margin-top: 20px;
+    padding: 15px;
+    background: #F9FAFB;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #D1D5DB;
+}
+
+.info-section h3,
+.venue h3,
+.map h3 {
+    color: #3B82F6;
+}
+
+.input-group {
+    margin: 15px 0;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #3B82F6;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 8px #3B82F6;
+}
+
+.btn {
+    background-color: #3B82F6;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #60A5FA;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-list li {
+    background: #E2E8F0;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 8px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #F9FAFB;
+    text-align: center;
+}
+
+footer p {
+    color: #374151;
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #3B82F6;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 30px;
+    margin: 0 15px;
+    color: #3B82F6;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    color: #1D4ED8;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+        margin: 10px;
+    }
+}

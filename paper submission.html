@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Submission & Archive - SREC College Nandyal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F3F4F6;
+            color: #374151;
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            position: static;
+            background: white;
+            width: 100%;
+        }
+        nav .main{
+            max-width: 1650px;
+            margin: auto;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            padding: 0 20px;
+    
+        }
+        nav .main .logo img{
+            height: 135px;
+            width: 150px;
+            padding-top: 15px;
+        }
+        .logo {
+            height: 70px;
+            transition: transform 0.3s ease-in-out, filter 0.5s ease-in-out;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+        }
+        nav .main ul{
+            padding-right: 20px;
+            list-style: none;
+            display: inline-flex;
+    
+        }
+        .main ul li a{
+            text-decoration: none;
+            padding: 8px;
+            line-height: 130px;
+            color: black;
+            font-size: 16px;
+            border-radius: 8px;
+            font-weight: 240;
+            transition: all o.5s ease;
+        }
+        .main ul li a:hover{
+            background-color: black;
+            color: white;
+        }
+        marquee{
+            border: 2px;
+            background-color: #004080;
+            color: white;
+            line-height: 40px;
+            font-size: 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1E293B, #3B82F6);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: #1E293B;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .scrolling-text {
+            width: 100%;
+            background: #3B82F6;
+            color: white;
+            overflow: hidden;
+            white-space: nowrap;
+            position: absolute;
+            bottom: -25px;
+            left: 0;
+            padding: 5px 0;
+        }
+
+        .scrolling-text div {
+            display: inline-block;
+            padding-left: 100%;
+            animation: scroll-left 15s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Paper Submission Form */
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1E293B;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #3B82F6;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #60A5FA;
+        }
+
+        /* Archive Section */
+        .archive-container {
+            width: 80%;
+            margin: 50px auto;
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .archive-container h2 {
+            color: #1E293B;
+        }
+
+        .archive-search {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .archive-search input {
+            width: 45%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .archive-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .archive-card:hover {
+            background: #e0e0e0;
+        }
+
+        .archive-card a {
+            text-decoration: none;
+            color: #1E293B;
+            font-weight: bold;
+        }
+
+        .archive-card p {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            background: #1E293B;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        .footer img {
+            width: 600px;
+            height: 300px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .footer input {
+            padding: 10px;
+            width: 250px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .footer button {
+            padding: 10px;
+            background: #3B82F6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer button:hover {
+            background: #60A5FA;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #60A5FA;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="main">
+            <div class="logo">
+                <a href="project1.html"><img src="images/santhiramlogo.jpg" alt="image"></a></div>
+            <ul>
+                <li><a href="project1.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="theme.html">Theme</a></li>
+                <li><a href="publication.html">Publication</a></li>
+                <li><a href="important dates.html">Important Dates</a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="#keynote">Keynote</a></li>
+                <li><a href="paper submission.html">Paper Submission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Nearby locations.html">NearBy location</a></li>
+            </ul>
+        </div>
+     </nav>
+     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+        welcome to santhiram Engineering College
+     </marquee>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to the Paper Submission Portal</h1>
+        <p>Submit your research papers for the upcoming conference at SREC College Nandyal.</p>
+    </div>
+
+    <!-- Header Section -->
+    <div class="header">
+        Ensuring a professional tone and following the specific submission format provided on the conference platform.
+        <div class="scrolling-text">
+            <div>Paper Submission Deadline: May 29, 2025 | Submissions must be in DOC/DOCX format via the online system.</div>
+        </div>
+    </div>
+
+    <!-- Paper Submission Form -->
+    <div class="container">
+        <h2>Paper Submission Form</h2>
+        <form>
+            <label for="title">Paper Title</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="abstract">Abstract</label>
+            <textarea id="abstract" name="abstract" rows="5" required></textarea>
+
+            <label for="keywords">Keywords</label>
+            <input type="text" id="keywords" name="keywords" required>
+
+            <label for="file">Upload Paper (DOC/DOCX only)</label>
+            <input type="file" id="file" name="file" accept=".doc, .docx" required>
+
+            <button type="submit">Submit Paper</button>
+        </form>
+    </div>
+
+    <!-- Paper Archive Section -->
+    <div class="archive-container">
+        <h2>Old Paper Archive</h2>
+        <div class="archive-search">
+            <input type="text" placeholder="Search by title..." id="search">
+            <input type="text" placeholder="Filter by year..." id="year">
+        </div>
+        <div class="archive-grid">
+            <!-- Sample Archive Cards -->
+            <div class="archive-card">
+                <a href="#">Research Paper 1</a>
+                <p>Author: person 1</p>
+                <p>Year: 2025</p>
+            </div>
+            <div class="archive-card">
+                <a href="#">Research Paper 2</a>
+                <p>Author: Person 2</p>
+                <p>Year: 2024</p>
+            </div>
+            <div class="archive-card">
+                <a href="#">Research Paper 3</a>
+                <p>Author: Person 3</p>
+                <p>Year: 2023</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="footer">
+        <img src="https://assets.collegedunia.com/public/college_data/images/appImage/14929_SEC_New.jpg" alt="Conference Image">
+        <h3>Contact Us</h3>
+        <p>For further inquiries, reach out to us:</p>
+        <p>srec.nandyal@gmail.com | +917799468780</p>
+        <input type="email" placeholder="Enter your email for updates">
+        <button>Submit</button>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

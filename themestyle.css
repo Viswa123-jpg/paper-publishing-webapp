@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background: white;
+}
+nav{
+    position: static;
+    background: white;
+    width: 100%;
+}
+nav .main{
+    max-width: 1650px;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+nav .main .logo img{
+    height: 145px;
+    width: 150px;
+    padding-top: 15px;
+}
+.logo {
+    height: 70px;
+    transition: transform 0.3s ease-in-out, filter 0.5s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+nav .main ul{
+    padding-right: 20px;
+    list-style: none;
+    display: inline-flex;
+    
+}
+.main ul li a{
+    text-decoration: none;
+    padding: 8px;
+    line-height: 150px;
+    color: black;
+    font-size: 16px;
+    font-weight: 240;
+    border-radius: 8px;
+    transition: all o.5s ease;
+}
+.main ul li a:hover{
+    background-color: black;
+    color: white;
+}
+marquee{
+    border: 2px;
+    background-color: #004080;
+    color: white;
+    line-height: 40px;
+    font-size: 1rem;
+}
+.content{
+    display: flex;
+    padding-left: 35px;
+    line-height: 50px;
+    font-size: 18px;
+}
+.sub-logo{
+   padding-left: 160px;
+   padding-top: 60px;
+}
+.sub-logo img{
+    height: 225px;
+    width: 250px;
+    padding-top: 15px;
+}
+.globe{
+    display: flex;
+    padding-left: 35px;
+}
+.globe-content{
+    background: #3A7CA5;
+    width: 100%;
+    height: 500px;
+    padding-top: 20px;
+}
+.globe-content i{
+    padding: 0 50px;
+    color: white;
+}
+.main-para{
+    padding-left: 20px;
+    line-height: 30px;
+    padding-top: 10px;
+
+}
+.contact{
+    background: gray;
+    margin-top: 60px;
+}
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    gap: 5rem;
+    height: 300px;
+    padding: 10px 0;
+}
+.first-info{
+    padding-left: 25px;
+    padding-top: 90px;
+}
+.social-icons i{
+    font-size: 35px;
+    margin-right: 10px;
+    padding: 10px 0;
+}
+.social-icons i:hover{
+    color: white;
+}
+.second-info{
+    padding-left: 25px;
+    padding-top: 90px;
+}
+.third-info{
+    left: 25px;
+    padding-top: 90px;
+}
+.form .box{
+    padding: 10px 12px;
+    border: none;
+    border-radius: 9px;
+}
+.form .button{
+    margin-top: 10px;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 9px;
+    background: rgb(48, 48, 185);
+    color: white;
+}
+.form .button:hover{
+    background: black;
+}

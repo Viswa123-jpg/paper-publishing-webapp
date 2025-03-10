@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICASPACE 2025 - Santhiram Engineering College Conference</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #1E293B, #3B82F6);
+            color: #374151;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        nav{
+            position: static;
+            background: white;
+            width: 100%;
+        }
+        nav .main{
+            max-width: 1650px;
+            margin: auto;
+            width: 100%;
+            display: flex;
+            text-align: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        nav .main .logo img{
+            height: 130px;
+            width: 150px;
+            padding-top: 15px;
+        }
+        nav .main ul{
+            padding-right: 55px;
+            list-style: none;
+            display: flex;
+    
+        }
+        .main ul li a{
+            text-decoration: none;
+            padding: 9px;
+            line-height: 120px;
+            color: black;
+            font-size: 16px;
+            font-weight: 240;
+            border-radius: 8px;
+            transition: all o.5s ease;
+        }
+        .main ul li a:hover{
+            background-color: black;
+            color: white;
+        }
+        nav .bar{
+            position: relative;
+            margin: auto;
+            display: none;
+        }
+        nav .bar i{
+            position: absolute;
+            font-size: 35px;
+        }
+        input[type="checkbox"]{
+            display: none;
+
+        }
+
+        marquee{
+            border: 2px;
+            line-height: 40px;
+            width: 1270px;
+            background-color: #004080;
+            color: white;
+            font-size: 1rem;
+    
+        }
+        .header {
+            background-color: rgba(30, 41, 59, 0.95);
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            position: relative;
+        }
+
+        .logo {
+            height: 70px;
+            transition: transform 0.3s ease-in-out, filter 0.5s ease-in-out;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 90%;
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #1E293B;
+            border-left: 5px solid #3B82F6;
+            padding-left: 15px;
+            font-size: 24px;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .publication-box {
+            background: #F8FAFC;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-align: left;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-in-out forwards;
+        }
+
+        .publication-box:hover {
+            transform: translateY(-5px);
+            background: #E5E7EB;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #3B82F6;
+            color: white;
+            padding: 14px 22px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background-color: #2563EB;
+            transform: scale(1.05);
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #3B82F6;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Paper Submission Guidelines Section */
+        .contact-section {
+            background: #1E293B;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        .contact-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            margin-bottom: 15px;
+        }
+
+        .email-form {
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .email-form input[type="email"] {
+            padding: 12px;
+            border-radius: 8px;
+            width: 250px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .email-form button {
+            padding: 12px 20px;
+            background-color: #3B82F6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .email-form button:hover {
+            background-color: #2563EB;
+        }
+
+        .contact-section a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Paper Submission Guidelines Section */
+        .guidelines-section {
+            background-color: #F8FAFC;
+            padding: 40px;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-height: 400px;
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+        }
+
+        .guidelines-section h2 {
+            color: #1E293B;
+            margin-bottom: 20px;
+        }
+
+        .guidelines-section ul {
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+
+        .guidelines-section li {
+            margin-bottom: 12px;
+        }
+
+        .guidelines-section p {
+            margin-bottom: 15px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* New Style for the Springer Section */
+        .guidelines-section p {
+            margin-bottom: 25px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .guidelines-section .note {
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="checkbox">
+     <nav>
+        <div class="main">
+            <div class="logo">
+                <a href="project1.html"><img src="images/santhiramlogo.jpg" alt="image"></a></div>
+            <ul>
+                <li><a href="project1.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="theme.html">Theme</a></li>
+                <li><a href="publication.html">Publication</a></li>
+                <li><a href="important dates.html">Important Dates </a></li>
+                <li><a href="registration.html">Registration</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="#keynote">Keynote</a></li>
+                <li><a href="paper submission.html">Paper Submission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Nearby locations.html">NearBy location</a></li>
+            </ul>
+            <label for="check" class="bar">
+                <i class="fa-solid fa-bars" id="bars"></i>
+                <i class="fa-solid fa-times" id="times"></i>
+            </label>
+        </div>
+     </nav>
+     <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+        welcome to santhiram Engineering College
+     </marquee>
+    <div class="header">
+        <img src="https://static.wixstatic.com/media/57b3c5_17272e83a8fb4e89bba63b22a5ff9eae~mv2.jpg" alt="Santhiram Engineering College Logo" class="logo">
+        <span>Santhiram Engineering College - ICASPACE 2025</span>
+    </div>
+    <div class="container">
+        <h2>Conference Proceedings</h2>
+        <div class="publication-box">
+            <p>All accepted papers will be published in the Scopus-indexed Springer Lecture Notes Series on Electrical Engineering.</p>
+            <p>No change, but published papers will be available online for easy access.</p>
+            <a href="#" class="btn">View Proceedings</a>
+        </div>
+
+        <h2>Journal Publications</h2>
+        <div class="publication-box">
+            <p>Selected high-quality papers from the ICASPACE 2025 Conference will be recommended for publication in reputed international journals in the field of Electronics and Communication Engineering (ECE). These journals are recognized globally, offering a platform for researchers to further disseminate their work to a wider audience.</p>
+            <a href="#" class="btn">Explore Journals</a>
+        </div>
+
+        <h2>Indexing and Databases</h2>
+        <div class="publication-box">
+            <p>All accepted papers presented at the ICASPACE 2025 Conference will be indexed in leading databases, including Scopus, IEEE Xplore, Web of Science, and Google Scholar. This ensures that your research gains global visibility and contributes to the academic and professional advancement in the field of Electronics and Communication Engineering (ECE).</p>
+        </div>
+
+        <h2>Guidelines for Authors</h2>
+        <div class="publication-box">
+            <p>Authors submitting papers to the ICASPACE 2025 Conference in Electronics and Communication Engineering (ECE) must adhere to the following guidelines:
+
+                Original Contributions: Papers must be original and not previously published.
+                Experimental & Simulation Studies: Submissions should include experimental investigations, simulation studies with practical results, or case studies of industrial significance.
+                Formatting: Authors should follow the provided paper formatting templates available on the conference website.
+                Plagiarism Check:All submissions will undergo a plagiarism check to ensure originality.
+                Paper Length: Papers should be within the specified word limit (usually 4 to 6 pages).</p>
+            <a href="#" class="btn">Download Templates</a>
+        </div>
+
+        <h2>Important Links & Resources</h2>
+        <div class="publication-box">
+            <p>Find conference proceedings, previous publications, and other essential resources.</p>
+            <a href="#" class="btn">Access Resources</a>
+        </div>
+    </div>
+
+    <!-- Paper Submission Guidelines Section -->
+    <div class="guidelines-section">
+        <h2>Paper Submission Guidelines</h2>
+        <p>Every article submitted to ICASPACE 2025 must meet the following criteria:</p>
+        <ul>
+            <li>Consisting of experimental investigation with specific conclusions</li>
+            <li>Original Contribution, not published earlier</li>
+            <li>Case studies of industrial importance</li>
+            <li>Simulation studies with practical demonstration/results</li>
+            <li>Design of Instruments / Systems / Software</li>
+        </ul>
+        <h2>Conference Proceedings with Springer</h2>
+        <p>It is planned to publish the peer-reviewed and selected papers of the conference as proceedings with Springer in their prestigious “Lecture Notes in Electrical Engineering” series. For detailed instructions for authors and editors of conference proceedings, kindly visit the Conference Proceedings Link. Select papers from the conference will be published by Springer as a proceedings book volume. Springer will conduct quality checks on the accepted papers, and only papers that pass these checks will be published.</p>
+        <p class="note">Note: Springer Nature does not charge any money for publication of Non-Open Access content. Abstracts/extended abstracts and short papers (less than 4 pages) are not considered for publication.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h2>Connect</h2>
+        <p>Bringing scholars together for global knowledge exchange.</p>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>Engage | Inspire</p>
+        <p>icaspace@srec.ac.in</p>
+        <p>+918888888888</p>
+
+        <h3>Enter your email address</h3>
+        <p>Your email for updates</p>
+        <form class="email-form">
+            <input type="email" placeholder="Your Email Address" required>
+            <button type="submit">Submit for conference updates</button>
+        </form>
+    </div>
+</body>
+
+</html>
