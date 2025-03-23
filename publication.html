@@ -7,71 +7,69 @@
     <title>ICASPACE 2025 - Santhiram Engineering College Conference</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CDN -->
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(to right, #1E293B, #3B82F6);
-            color: #374151;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-        nav{
-            position: static;
-            background: white;
-            width: 100%;
-        }
-        nav .main{
-            max-width: 1650px;
-            margin: auto;
-            width: 100%;
-            display: flex;
-            text-align: center;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-        nav .main .logo img{
-            height: 130px;
-            width: 150px;
-            padding-top: 15px;
-        }
-        nav .main ul{
-            padding-right: 55px;
-            list-style: none;
-            display: flex;
-    
-        }
-        .main ul li a{
-            text-decoration: none;
-            padding: 9px;
-            line-height: 120px;
-            color: black;
-            font-size: 16px;
-            font-weight: 240;
-            border-radius: 8px;
-            transition: all o.5s ease;
-        }
-        .main ul li a:hover{
-            background-color: black;
-            color: white;
-        }
-        nav .bar{
-            position: relative;
-            margin: auto;
-            display: none;
-        }
-        nav .bar i{
-            position: absolute;
-            font-size: 35px;
-        }
-        input[type="checkbox"]{
-            display: none;
-
-        }
+        body{
+    font-family: sans-serif ;
+    overflow-x: hidden;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  nav{
+    height: 110px;
+    background: #2c3e50;
+    position: relative;
+  }
+  nav img{
+    width: 80px;
+    position: absolute;
+    top: 9px;
+    left: 2%;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 110px;
+    margin: 0 10px;
+  }
+  nav ul li a{
+    position: relative;
+    color: white;
+    padding: 5px 0;
+  }
+  nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+  }
+  nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  label #btn, label #cancel{
+    color: white;
+    font-size: 30px;
+    float: right;
+    line-height: 110px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
 
         marquee{
             border: 2px;
@@ -292,30 +290,27 @@
 </head>
 
 <body>
-    <input type="checkbox" id="checkbox">
-     <nav>
-        <div class="main">
-            <div class="logo">
-                <a href="project1.html"><img src="images/santhiramlogo.jpg" alt="image"></a></div>
-            <ul>
-                <li><a href="project1.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="theme.html">Theme</a></li>
-                <li><a href="publication.html">Publication</a></li>
-                <li><a href="important dates.html">Important Dates </a></li>
-                <li><a href="registration.html">Registration</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="#keynote">Keynote</a></li>
-                <li><a href="paper submission.html">Paper Submission</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="Nearby locations.html">NearBy location</a></li>
-            </ul>
-            <label for="check" class="bar">
-                <i class="fa-solid fa-bars" id="bars"></i>
-                <i class="fa-solid fa-times" id="times"></i>
-            </label>
-        </div>
-     </nav>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check">
+          <i class="fa-solid fa-bars" id="btn"></i>
+          <i class="fa-solid fa-times" id="cancel"></i>
+        </label>
+        <a href="project1.html"><img src="C:\Users\Admin\OneDrive\Desktop\my project\images\santhiramlogo.jpg" alt="img"> </a>
+        <ul>
+          <li><a href="project1.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="theme.html">Theme</a></li>
+          <li><a href="publication.html">Publication</a></li>
+          <li><a href="important dates.html">Important Dates </a></li>
+          <li><a href="registration.html">Registration</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="keynote.html">Keynote</a></li>
+          <li><a href="paper submission.html">Paper Submission</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="Nearby locations.html">NearBy location</a></li>
+        </ul>
+      </nav>
      <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
         welcome to santhiram Engineering College
      </marquee>

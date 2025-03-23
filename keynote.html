@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  <style>
+    body{
+    font-family: sans-serif ;
+    overflow-x: hidden;
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+  }
+  nav{
+    height: 110px;
+    background: #2c3e50;
+    position: relative;
+  }
+  nav img{
+    width: 80px;
+    position: absolute;
+    top: 9px;
+    left: 2%;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 110px;
+    margin: 0 10px;
+  }
+  nav ul li a{
+    position: relative;
+    color: white;
+    padding: 5px 0;
+  }
+  nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+  }
+  nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  label #btn, label #cancel{
+    color: white;
+    font-size: 30px;
+    float: right;
+    line-height: 110px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+marquee{
+    border: 2px;
+    line-height: 40px;
+    width: 100%;
+    background-color: #004080;
+    color: white;
+    font-size: 1rem;
+}
+.side_by_side{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.side img{
+  width: 240px;
+  height: 240px;
+  padding: 70px 90px 10px 30px;
+}
+
+.side #content{
+  padding-right: 70px;
+}
+
+
+.contact{
+    background: gray;
+    margin-top: 60px;
+}
+.contact-info{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    gap: 5rem;
+    height: 300px;
+}
+.first-info{
+    padding-left: 25px;
+    padding-top: 90px;
+}
+.social-icons i{
+    font-size: 35px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+.social-icons i:hover{
+    color: white;
+}
+.second-info{
+    padding-left: 25px;
+    padding-top: 90px;
+    line-height: 35px;
+}
+.third-info{
+    padding-left: 25px;
+    padding-top: 90px;
+}
+.form .box{
+    padding: 10px 12px;
+    border: none;
+    margin-top: 10px;
+    border-radius: 9px;
+}
+.form .button{
+    margin-top: 10px;
+    padding: 12px 12px;
+    border: none;
+    border-radius: 9px;
+    background: rgb(48, 48, 185);
+    color: white;
+}
+.form .button:hover{
+    background: black;
+}
+  </style>
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fa-solid fa-bars" id="btn"></i>
+      <i class="fa-solid fa-times" id="cancel"></i>
+    </label>
+    <a href="project1.html"><img src="C:\Users\Admin\OneDrive\Desktop\my project\images\santhiramlogo.jpg" alt="img"> </a>
+    <ul>
+      <li><a href="project1.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="theme.html">Theme</a></li>
+      <li><a href="publication.html">Publication</a></li>
+      <li><a href="important dates.html">Important Dates </a></li>
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="keynote.html">Keynote</a></li>
+      <li><a href="paper submission.html">Paper Submission</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Nearby locations.html">NearBy location</a></li>
+    </ul>
+  </nav>
+ <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+    welcome to santhiram Engineering College
+ </marquee>
+ <div class="side_by_side">
+  <div class="side" style="margin-right: 10px;">
+    <img src="https://th.bing.com/th/id/OIP.y3aGAt6mWFUn0_7KTvtWzQHaHa?w=202&h=202&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="image">
+    <h3 id="content">prof.Dr.malli karjuna rao</h3>
+    <h4 id="content" style="padding-top: 10px;">shantiram college</h4>
+  </div>
+
+  <div class="side">
+    <img src="https://th.bing.com/th/id/OIP.y-b2cUFtP2vCySLHEB1YPwHaHa?w=177&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="image">
+    <h3 id="content">prof.Dr.subramanyam</h3>
+    <h4 id="content" style="padding-top: 10px;">shantiram college</h4>
+  </div>
+
+  <div class="side">
+    <img src="https://th.bing.com/th/id/OIP.FfTx_Wlogb40OAubn5V05wHaEo?w=272&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="image">
+    <h3 id="content">prof.shantiram</h3>
+    <h4 id="content" style="padding-top: 10px;">shantiram college</h4>
+  </div>
+ </div>
+
+
+ <footer>
+  <div class="contact">
+      <div class="contact-info">
+          <div class="first-info">
+              <h1 style="font-size: 35px;">Connect</h1>
+              <p>Bringing scholars together for global <br>knowledge exchange.</p>
+      
+          <div class="social-icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-square-twitter"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-square-instagram"></i>
+          </div>
+          </div>
+          <div class="second-info">
+              <h4 style="font-size: 35px;",>Engage</h4>
+              <p>+911234567890</p>
+              <p>123456@srecnandyal.edu.in</p>
+          </div>
+          <div class="third-info">
+              <h4 style="font-size: 35px;">Inspire </h4>
+              <p>Enter your email address </p>
+              <form class="form">
+                  <input type="mail" class="box" placeholder="Enter your mail" ><br>
+                  <button class="button">Submit for conference updates</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</footer>
+</body>
+</html>

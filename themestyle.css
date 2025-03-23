@@ -1,60 +1,67 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
 body{
-    background: white;
-}
-nav{
-    position: static;
-    background: white;
-    width: 100%;
-}
-nav .main{
-    max-width: 1650px;
-    margin: auto;
-    width: 100%;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-nav .main .logo img{
-    height: 145px;
-    width: 150px;
-    padding-top: 15px;
-}
-.logo {
-    height: 70px;
-    transition: transform 0.3s ease-in-out, filter 0.5s ease-in-out;
-}
-
-.logo:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
-}
-nav .main ul{
-    padding-right: 20px;
+    font-family: sans-serif ;
+    overflow-x: hidden;
+  }
+  *{
+    margin: 0;
+    padding: 0;
     list-style: none;
-    display: inline-flex;
-    
-}
-.main ul li a{
     text-decoration: none;
-    padding: 8px;
-    line-height: 150px;
-    color: black;
-    font-size: 16px;
-    font-weight: 240;
-    border-radius: 8px;
-    transition: all o.5s ease;
-}
-.main ul li a:hover{
-    background-color: black;
+  }
+  nav{
+    height: 110px;
+    background: #2c3e50;
+    position: relative;
+  }
+  nav img{
+    width: 80px;
+    position: absolute;
+    top: 9px;
+    left: 2%;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 110px;
+    margin: 0 10px;
+  }
+  nav ul li a{
+    position: relative;
     color: white;
-}
+    padding: 5px 0;
+  }
+  nav ul li a:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
+  }
+  nav ul li a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  label #btn, label #cancel{
+    color: white;
+    font-size: 30px;
+    float: right;
+    line-height: 110px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
 marquee{
     border: 2px;
     background-color: #004080;
