@@ -18,13 +18,13 @@
   }
   nav{
     height: 110px;
-    background: #2c3e50;
+    background: #1E293B;
     position: relative;
   }
   nav img{
-    width: 80px;
+    width: 100px;
     position: absolute;
-    top: 9px;
+    top: 4px;
     left: 2%;
   }
   nav ul{
@@ -94,53 +94,60 @@ marquee{
 }
 
 
-.contact{
-    background: gray;
-    margin-top: 60px;
+.contact-section {
+  background: #1E293B;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 100px;
 }
-.contact-info{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
-    gap: 5rem;
-    height: 300px;
+
+.social-icons {
+  margin-top: 20px;
 }
-.first-info{
-    padding-left: 25px;
-    padding-top: 90px;
+
+.social-icons a {
+  color: white;
+  font-size: 30px;
+  margin: 0 10px;
+  transition: color 0.3s;
 }
-.social-icons i{
-    font-size: 35px;
-    margin-right: 10px;
-    padding-top: 10px;
+
+.social-icons a:hover {
+  color: #3B82F6;
 }
-.social-icons i:hover{
-    color: white;
+.email-form {
+  display: inline-block;
+  margin-top: 15px;
 }
-.second-info{
-    padding-left: 25px;
-    padding-top: 90px;
-    line-height: 35px;
+
+.email-form input[type="email"] {
+  padding: 12px;
+  border-radius: 8px;
+  width: 250px;
+  font-size: 16px;
+  margin-right: 10px;
 }
-.third-info{
-    padding-left: 25px;
-    padding-top: 90px;
+
+.email-form button {
+  padding: 12px 20px;
+  background-color: #3B82F6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
-.form .box{
-    padding: 10px 12px;
-    border: none;
-    margin-top: 10px;
-    border-radius: 9px;
+
+.email-form button:hover {
+  background-color: #2563EB;
 }
-.form .button{
-    margin-top: 10px;
-    padding: 12px 12px;
-    border: none;
-    border-radius: 9px;
-    background: rgb(48, 48, 185);
-    color: white;
-}
-.form .button:hover{
-    background: black;
+
+.contact-section a {
+  color: white;
+  text-decoration: underline;
 }
   </style>
 </head>
@@ -151,17 +158,17 @@ marquee{
       <i class="fa-solid fa-bars" id="btn"></i>
       <i class="fa-solid fa-times" id="cancel"></i>
     </label>
-    <a href="project1.html"><img src="images/santhiramlogo.jpg" alt="img"> </a>
+    <a href="project1.html"><img src="images/santhiramlogo1.png" alt="img"> </a>
     <ul>
       <li><a href="project1.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="theme.html">Theme</a></li>
-      <li><a href="publication.html">Publication</a></li>
+      <li><a href="paper submission.html">Paper Submission</a></li>
       <li><a href="important dates.html">Important Dates </a></li>
       <li><a href="registration.html">Registration</a></li>
       <li><a href="team.html">Team</a></li>
       <li><a href="keynote.html">Keynote</a></li>
-      <li><a href="paper submission.html">Paper Submission</a></li>
+      <li><a href="publication.html">Publication</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="Nearby locations.html">NearBy location</a></li>
     </ul>
@@ -189,35 +196,25 @@ marquee{
   </div>
  </div>
 
-
  <footer>
-  <div class="contact">
-      <div class="contact-info">
-          <div class="first-info">
-              <h1 style="font-size: 35px;">Connect</h1>
-              <p>Bringing scholars together for global <br>knowledge exchange.</p>
-      
-          <div class="social-icons">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-square-twitter"></i>
-              <i class="fa-brands fa-linkedin"></i>
-              <i class="fa-brands fa-square-instagram"></i>
-          </div>
-          </div>
-          <div class="second-info">
-              <h4 style="font-size: 35px;",>Engage</h4>
-              <p>+911234567890</p>
-              <p>123456@srecnandyal.edu.in</p>
-          </div>
-          <div class="third-info">
-              <h4 style="font-size: 35px;">Inspire </h4>
-              <p>Enter your email address </p>
-              <form class="form">
-                  <input type="mail" class="box" placeholder="Enter your mail" ><br>
-                  <button class="button">Submit for conference updates</button>
-              </form>
-          </div>
+  <div class="contact-section">
+      <h2>Connect</h2>
+      <p style="padding-top: 10px;">Bringing scholars together for global knowledge exchange.</p>
+      <div class="social-icons">
+          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
       </div>
+      <p style="padding-top: 10px;">Engage | Inspire</p>
+      <p style="padding-top: 15px;">icaspace@srec.ac.in</p>
+      <p style="padding-top: 15px;">+918888888888</p>
+
+      <h3 style="padding-top: 10px;">Enter your email address</h3>
+      <p style="padding-top: 10px;">Your email for updates</p>
+      <form class="email-form">
+          <input type="email" placeholder="Your Email Address" required>
+          <button type="submit">Submit for conference updates</button>
+      </form>
   </div>
 </footer>
 </body>

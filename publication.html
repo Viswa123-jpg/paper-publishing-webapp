@@ -19,13 +19,13 @@
   }
   nav{
     height: 110px;
-    background: #2c3e50;
+    background: #1E293B;
     position: relative;
   }
   nav img{
-    width: 80px;
+    width: 100px;
     position: absolute;
-    top: 9px;
+    top: 4px;
     left: 2%;
   }
   nav ul{
@@ -163,21 +163,7 @@
             transform: scale(1.05);
         }
 
-        .social-icons {
-            margin-top: 20px;
-        }
-
-        .social-icons a {
-            color: white;
-            font-size: 24px;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: #3B82F6;
-        }
-
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -192,55 +178,60 @@
 
         /* Paper Submission Guidelines Section */
         .contact-section {
-            background: #1E293B;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            width: 100%;
-            margin-top: 40px;
-        }
+  background: #1E293B;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
 
-        .contact-section h2 {
-            margin-bottom: 20px;
-        }
+.social-icons {
+  margin-top: 20px;
+}
 
-        .contact-section p {
-            margin-bottom: 15px;
-        }
+.social-icons a {
+  color: white;
+  font-size: 30px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
 
-        .email-form {
-            display: inline-block;
-            margin-top: 15px;
-        }
+.social-icons a:hover {
+  color: #3B82F6;
+}
+.email-form {
+  display: inline-block;
+  margin-top: 15px;
+}
 
-        .email-form input[type="email"] {
-            padding: 12px;
-            border-radius: 8px;
-            width: 250px;
-            font-size: 16px;
-            margin-right: 10px;
-        }
+.email-form input[type="email"] {
+  padding: 12px;
+  border-radius: 8px;
+  width: 250px;
+  font-size: 16px;
+  margin-right: 10px;
+}
 
-        .email-form button {
-            padding: 12px 20px;
-            background-color: #3B82F6;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
+.email-form button {
+  padding: 12px 20px;
+  background-color: #3B82F6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
 
-        .email-form button:hover {
-            background-color: #2563EB;
-        }
+.email-form button:hover {
+  background-color: #2563EB;
+}
 
-        .contact-section a {
-            color: white;
-            text-decoration: underline;
-        }
-
+.contact-section a {
+  color: white;
+  text-decoration: underline;
+}
         /* Paper Submission Guidelines Section */
         .guidelines-section {
             background-color: #F8FAFC;
@@ -296,7 +287,7 @@
           <i class="fa-solid fa-bars" id="btn"></i>
           <i class="fa-solid fa-times" id="cancel"></i>
         </label>
-        <a href="project1.html"><img src="images/santhiramlogo.jpg" alt="img"> </a>
+        <a href="project1.html"><img src="images/santhiramlogo1.png" alt="img"> </a>
         <ul>
           <li><a href="project1.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -315,7 +306,7 @@
         welcome to santhiram Engineering College
      </marquee>
     <div class="header">
-        <img src="https://static.wixstatic.com/media/57b3c5_17272e83a8fb4e89bba63b22a5ff9eae~mv2.jpg" alt="Santhiram Engineering College Logo" class="logo">
+        <img src="images/santhiramlogo1.png" alt="Santhiram Engineering College Logo" class="logo">
         <span>Santhiram Engineering College - ICASPACE 2025</span>
     </div>
     <div class="container">
@@ -373,25 +364,27 @@
     </div>
 
     <!-- Contact Section -->
-    <div class="contact-section">
-        <h2>Connect</h2>
-        <p>Bringing scholars together for global knowledge exchange.</p>
-        <div class="social-icons">
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+    <footer>
+        <div class="contact-section">
+            <h2 style="color: white; padding-left: 570px;">Connect</h2>
+            <p>Bringing scholars together for global knowledge exchange.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p style="padding-top: 10px;">Engage | Inspire</p>
+            <p style="padding-top: 15px;">icaspace@srec.ac.in</p>
+            <p style="padding-top: 15px;">+918888888888</p>
+    
+            <h3 style="padding-top: 10px;">Enter your email address</h3>
+            <p style="padding-top: 10px;">Your email for updates</p>
+            <form class="email-form">
+                <input type="email" placeholder="Your Email Address" required>
+                <button type="submit">Submit for conference updates</button>
+            </form>
         </div>
-        <p>Engage | Inspire</p>
-        <p>icaspace@srec.ac.in</p>
-        <p>+918888888888</p>
-
-        <h3>Enter your email address</h3>
-        <p>Your email for updates</p>
-        <form class="email-form">
-            <input type="email" placeholder="Your Email Address" required>
-            <button type="submit">Submit for conference updates</button>
-        </form>
-    </div>
+    </footer>
 </body>
 
 </html>

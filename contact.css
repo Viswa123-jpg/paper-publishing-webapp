@@ -12,13 +12,13 @@ body{
   }
   nav{
     height: 110px;
-    background: #2c3e50;
+    background: #1E293B;
     position: relative;
   }
   nav img{
-    width: 80px;
+    width: 100px;
     position: absolute;
-    top: 9px;
+    top: 4px;
     left: 2%;
   }
   nav ul{
@@ -184,52 +184,61 @@ textarea:focus {
     border-radius: 8px;
 }
 
-footer {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #F9FAFB;
+.contact-section {
+    background: #1E293B;
+    color: white;
+    padding: 40px 0;
     text-align: center;
-}
-
-footer p {
-    color: #374151;
-    margin: 0;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-footer ul li a {
-    color: #3B82F6;
-    text-decoration: none;
-}
-
-footer ul li a:hover {
-    text-decoration: underline;
-}
-
-.social-icons {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .social-icons {
     margin-top: 20px;
-}
-
-.social-icon {
+  }
+  
+  .social-icons a {
+    color: white;
     font-size: 30px;
-    margin: 0 15px;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .social-icons a:hover {
     color: #3B82F6;
-    transition: 0.3s;
-}
-
-.social-icon:hover {
-    color: #1D4ED8;
-}
-
+  }
+  .email-form {
+    display: inline-block;
+    margin-top: 15px;
+  }
+  
+  .email-form input[type="email"] {
+    padding: 12px;
+    border-radius: 8px;
+    width: 250px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .email-form button {
+    padding: 12px 20px;
+    background-color: #3B82F6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .email-form button:hover {
+    background-color: #2563EB;
+  }
+  
+  .contact-section a {
+    color: white;
+    text-decoration: underline;
+  }
 @media (max-width: 768px) {
     .container {
         padding: 15px;

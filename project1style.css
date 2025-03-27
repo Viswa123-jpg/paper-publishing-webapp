@@ -10,8 +10,26 @@ body{
   }
   nav{
     height: 110px;
-    background: #2c3e50;
+    background: #1E293B;
     position: relative;
+  }
+  .name{
+    padding-left: 150px;
+    line-height: 75px;
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .logo img{
+    width: 80px;
+    left: 840px;
+  }
+  .logo1 img{
+    width: 80px;
+    left: 940px;
+  }
+  .logo2 img{
+    width: 80px;
+    left: 1040px;
   }
   nav img{
     width: 80px;
@@ -21,12 +39,12 @@ body{
   }
   nav ul{
     float: right;
-    margin-right: 20px;
+    margin-right: 50px;
   }
   nav ul li{
     display: inline-block;
     line-height: 110px;
-    margin: 0 10px;
+    margin: 0 12px;
   }
   nav ul li a{
     position: relative;
@@ -135,33 +153,27 @@ marquee{
 }
 .center_title{
     position: absolute;
-    top: 59%;
-    left: 20%;
+    top: 75%;
+    left: 50%;
     width: 100%;
     transform: translate(-50%, -50%);
     padding: 0 20px;
-    color: #d0e1ef;
+    color: #f2fe08;
     text-align: center;
     font-size: 20px;
     font-weight: 600;
 }
 .center{
     position: absolute;
-    top: 52%;
-    left: 75%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    padding: 0 20px;
-    text-align: center;
-    color: white;
+    padding-left: 160px; 
+    line-height: 50px;
 }
 .center .subtitle h1{
     font-size: 40px;
-    color:rgb(229, 247, 75);
 }
 .center .subtitle h2{
     font-size: 40px;
-    color: rgb(8, 233, 245);
+    padding-left:150px ;
 }
 .center .subtitle h3{
     font-size: 30px;
@@ -180,60 +192,7 @@ marquee{
 #about,p{
     padding-top: 30px;   
 }
-.row{
-    position: absolute;
-    right: 300px;
-    top: 740px;
-    line-height: 20px;
-}
-.row .col{
-    font-size: 30px;
-    font-weight: 400;
-}
-.row .col1{
-    margin-left: 30px;
-}
-.row1{
-    position: absolute;
-    right: 80px;
-    top: 740px;
-    line-height: 20px;
-}
-.row1 .col{
-    font-size: 30px;
-    font-weight: 400;
-}
-.row1 .col1{
-    margin-left: 30px;
-}
-.row2{
-    position: absolute;
-    right: 300px;
-    top: 880px;
-    line-height: 20px;
-}
-.row2 .col{
-    font-size: 30px;
-    font-weight: 400;
-    margin-left: 25px;
-}
-.row2 .col1{
-    margin-left: 39px;
-}
-.row3{
-    position: absolute;
-    right: 80px;
-    top: 880px;
-    line-height: 20px;
-}
-.row3 .col{
-    font-size: 30px;
-    font-weight: 400;
-    margin-left: 32px;
-}
-.row3 .col1{
-    margin-left: 12px;
-}
+
 .location{
     display: flex;
 }
@@ -248,52 +207,64 @@ marquee{
 .map{
     padding-left: 160px;
 }
-.contact{
-    background: gray;
-    margin-top: 60px;
+
+
+.contact-section {
+  background: #1E293B;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
 }
-.contact-info{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
-    gap: 5rem;
-    height: 300px;
+
+.social-icons {
+  margin-top: 28l,0px;
 }
-.first-info{
-    padding-left: 25px;
-    padding-top: 90px;
-    
+
+.social-icons a {
+  color: white;
+  font-size: 30px;
+  margin: 0 10px;
+  transition: color 0.3s;
 }
-.social-icons i{
-    font-size: 35px;
-    margin-right: 10px;
+
+.social-icons a:hover {
+  color: #3B82F6;
 }
-.social-icons i:hover{
-    color: white;
+.email-form {
+  display: inline-block;
+  margin-top: 15px;
 }
-.second-info{
-    padding-left: 25px;
-    padding-top: 90px;
+
+.email-form input[type="email"] {
+  padding: 12px;
+  border-radius: 8px;
+  width: 250px;
+  font-size: 16px;
+  margin-right: 10px;
 }
-.third-info{
-    padding-left: 25px;
-    padding-top: 90px;
+
+.email-form button {
+  padding: 12px 20px;
+  background-color: #3B82F6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
-.form .box{
-    padding: 10px 12px;
-    border: none;
-    border-radius: 9px;
+
+.email-form button:hover {
+  background-color: #2563EB;
 }
-.form .button{
-    margin-top: 10px;
-    padding: 10px 12px;
-    border: none;
-    border-radius: 9px;
-    background: rgb(48, 48, 185);
-    color: white;
+
+.contact-section a {
+  color: white;
+  text-decoration: underline;
 }
-.form .button:hover{
-    background: black;
-}
+
 
 @media (max-width: 1118px) {
     nav img{

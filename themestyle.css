@@ -10,13 +10,13 @@ body{
   }
   nav{
     height: 110px;
-    background: #2c3e50;
+    background: #1E293B;
     position: relative;
   }
   nav img{
-    width: 80px;
+    width: 100px;
     position: absolute;
-    top: 9px;
+    top: 4px;
     left: 2%;
   }
   nav ul{
@@ -73,81 +73,66 @@ marquee{
     display: flex;
     padding-left: 35px;
     line-height: 50px;
-    font-size: 18px;
+    font-size: 22px;
 }
-.sub-logo{
-   padding-left: 160px;
-   padding-top: 60px;
+.content .main-content ,p,h2{
+  padding-top: 12px;
+  
 }
-.sub-logo img{
-    height: 225px;
-    width: 250px;
-    padding-top: 15px;
-}
-.globe{
-    display: flex;
-    padding-left: 35px;
-}
-.globe-content{
-    background: #3A7CA5;
-    width: 100%;
-    height: 480px;
-    padding-top: 20px;
-}
-.globe-content i{
-    padding: 0 50px;
-    color: white;
-}
-.main-para{
-    padding-left: 20px;
-    line-height: 30px;
-    padding-top: 10px;
 
+
+.contact-section {
+  background: #1E293B;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
 }
-.contact{
-    background: gray;
-    margin-top: 60px;
+
+.social-icons {
+  margin-top: 20px;
 }
-.contact-info{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
-    gap: 5rem;
-    height: 300px;
-    padding: 10px 0;
+
+.social-icons a {
+  color: white;
+  font-size: 30px;
+  margin: 0 10px;
+  transition: color 0.3s;
 }
-.first-info{
-    padding-left: 25px;
-    padding-top: 90px;
+
+.social-icons a:hover {
+  color: #3B82F6;
 }
-.social-icons i{
-    font-size: 35px;
-    margin-right: 10px;
-    padding: 10px 0;
+.email-form {
+  display: inline-block;
+  margin-top: 15px;
 }
-.social-icons i:hover{
-    color: white;
+
+.email-form input[type="email"] {
+  padding: 12px;
+  border-radius: 8px;
+  width: 250px;
+  font-size: 16px;
+  margin-right: 10px;
 }
-.second-info{
-    padding-left: 25px;
-    padding-top: 90px;
+
+.email-form button {
+  padding: 12px 20px;
+  background-color: #3B82F6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
-.third-info{
-    left: 25px;
-    padding-top: 90px;
+
+.email-form button:hover {
+  background-color: #2563EB;
 }
-.form .box{
-    padding: 10px 12px;
-    border: none;
-    border-radius: 9px;
-}
-.form .button{
-    margin-top: 10px;
-    padding: 10px 12px;
-    border: none;
-    border-radius: 9px;
-    background: rgb(48, 48, 185);
-    color: white;
-}
-.form .button:hover{
-    background: black;
+
+.contact-section a {
+  color: white;
+  text-decoration: underline;
 }
