@@ -117,7 +117,7 @@ textarea:focus {
     box-shadow: 0 0 8px #3B82F6;
 }
 
-.btn {
+.btn .btn-primary{
     background-color: #3B82F6;
     color: white;
     padding: 12px;
@@ -129,7 +129,7 @@ textarea:focus {
     transition: 0.3s;
 }
 
-.btn:hover {
+.btn.btn-primary:hover {
     background-color: #60A5FA;
 }
 
