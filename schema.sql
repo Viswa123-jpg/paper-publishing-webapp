@@ -12,4 +12,13 @@ create table paper_publications (
     title varchar(500),
     abstract varchar(500),
     keywords varchar(500)
-    )
+    );
+
+CREATE TABLE IF NOT EXISTS users (
+
+        id bigint NOT NULL,
+        username VARCHAR(150) NOT NULL,
+        password VARCHAR(500) NOT NULL,
+        user_role char(50) NOT NULL DEFAULT 'normal_user',
+        PRIMARY KEY(id)
+);
