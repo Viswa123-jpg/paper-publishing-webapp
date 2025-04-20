@@ -118,15 +118,8 @@
             <img src="{{url_for('static', filename='images/nba logo.png')}}" alt="Logo" width="80" height="83" class="d-inline-block align-text-top">
             <img src="{{url_for('static', filename='images/naac logo.png')}}" alt="Logo" width="80" height="83" class="d-inline-block align-text-top">
 
-            <div class="btn-group">
-              <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Login
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{url_for('login')}}">Login</a></li>
-                <li><a class="dropdown-item" href="#">Register</a></li>
-              </ul>
-            </div>
+            <a class="btn btn-info" href="{{url_for('login')}}" role="button">Login</a>
+                
         </div>
       </nav>
 
@@ -136,7 +129,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mx-auto">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
               </li>
