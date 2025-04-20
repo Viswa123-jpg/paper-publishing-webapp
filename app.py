@@ -11,6 +11,8 @@ from author_submission import author_submission, db
 import time
 from concurrent.futures import ThreadPoolExecutor
 from mail_service import mail_service
+from flask_bcrypt import Bcrypt
+from flask_login import LoginManager
 
 # Get the current system date
 current_date = date.today()
@@ -19,6 +21,8 @@ print("Current Date:", current_date)
 import os
 
 app = Flask(__name__)
+bcrypt = Bcrypt()
+login_manager = LoginManager()
 
 db_name = 'santhiram_clg'
 
@@ -28,6 +32,14 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 db.init_app(app)
+bcrypt.init_app(app)
+login_manager.init_app(app)
+
+from app.auth import auth as auth_blueprint
+app.register_blueprint(auth_blueprint)
+
+from app.routes import main as main_blueprint
+app.register_blueprint(main_blueprint)
 
 mail_service = mail_service(
     smtp_server='smtp.gmail.com',
