@@ -1,7 +1,0 @@
-
-xpython:S4143 "[Verify this is the key that was intended; a value has already been saved for it on line 31.(Ù©–¥ÿÿÿÿÿ
-xpython:S4143"[Verify this is the key that was intended; a value has already been saved for it on line 29.(¯†Ø½üÿÿÿÿ
-_python:S1763U"GDelete this unreachable code or refactor the code to make it reachable.(Ë©¬Û
-<python:S6779’"#Don't disclose "Flask" secret keys.(þûò£
-lsecrets:S6697"NMake sure this MySQL database password gets changed and removed from the code.(›»Ô°üÿÿÿÿ
-lsecrets:S6697"NMake sure this MySQL database password gets changed and removed from the code.(¯†Ø½üÿÿÿÿ
