@@ -1,8 +1,14 @@
 from flask import Blueprint, render_template
 from auth import role_required
 from flask import Flask, render_template, request,  jsonify, send_file
-from models import author_submission
+from models import author_submission, db
+from datetime import date
+import time
 
+# Get the current system date
+current_date = date.today()
+
+print("Current Date:", current_date)
 main = Blueprint('main', __name__)
 
 @main.route('/', endpoint='home')

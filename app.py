@@ -6,19 +6,12 @@ from sqlalchemy.orm import sessionmaker
 from flask_wtf import FlaskForm
 from wtforms import FileField, SubmitField
 from werkzeug.utils import secure_filename
-from datetime import date
 from models import author_submission, user, db
-import time
-from concurrent.futures import ThreadPoolExecutor
 from mail_service import mail_service
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from auth import bcrypt
 
-# Get the current system date
-current_date = date.today()
-
-print("Current Date:", current_date)
 import os
 
 app = Flask(__name__)
@@ -26,11 +19,10 @@ app = Flask(__name__)
 login_manager = LoginManager()
 
 db_name = 'santhiram_clg'
-username='krishna'
-password='Naruto#162'
-
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:root@host.docker.internal:3306/' + db_name
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + username + ':' + password + '@localhost:3306/' + db_name
+DB_HOST = os.getenv('DB_HOST', 'localhost')
+DB_USERNAME = os.getenv('DB_USERNAME', 'root')
+DB_PASSWORD = os.getenv('DB_PASSWORD', 'root')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + DB_USERNAME + ':' + DB_PASSWORD + '@' + DB_HOST + ':3306/' + db_name
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
