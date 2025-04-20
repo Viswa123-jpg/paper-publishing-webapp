@@ -55,14 +55,14 @@
     <div class="auth-container">
         <!-- Login Form -->
         <div id="login-form">
-            <form>
+            <form method="POST", action="/login">
                 <div class="mb-3">
                     <label>Email address</label>
-                    <input type="email" class="form-control" required>
+                    <input type="email" name="email_id" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label>Password</label>
-                    <input type="password" class="form-control" required>
+                    <input type="password" name="password" class="form-control" required>
                 </div>
                 <button class="btn btn-primary w-100">Login</button>
                 <a href="#" class="form-link" onclick="showForm('register-form')">Don't have an account? Register</a>
@@ -71,18 +71,18 @@
         </div>
 
         <div id="register-form" class="hidden">
-            <form>
+            <form method="POST" action="/signup">
                 <div class="mb-3">
                     <label>Full Name</label>
                     <input type="text" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label>Email address</label>
-                    <input type="email" class="form-control" required>
+                    <input type="email" name="email_id" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label>Password</label>
-                    <input type="password" class="form-control" required>
+                    <input type="password" name="password" class="form-control" required>
                 </div>
                 <button class="btn btn-success w-100">Register</button>
                 <a href="#" class="form-link" onclick="showForm('login-form')">Already have an account? Login</a>
