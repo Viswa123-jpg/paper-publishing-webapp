@@ -111,19 +111,19 @@
     <nav class="navbar bg-body-tertiary">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="C:\Users\Admin\OneDrive\Documents\my project\images\santhiramlogo1.png" alt="Logo" width="100" height="93" class="d-inline-block align-text-top">
+            <img src="{{url_for('static', filename='images/santhiramlogo1.png')}}" alt="Logo" width="100" height="93" class="d-inline-block align-text-top">
           </a>
-            <h1 style="color: white;">Santhiram Engineering College <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Autonomous)</h1>
-            <img src="C:\Users\Admin\OneDrive\Documents\my project\images\aictelogo.webp" alt="Logo" width="80" height="83" class="d-inline-block align-text-top">
-            <img src="C:\Users\Admin\OneDrive\Documents\my project\images\nba logo.png" alt="Logo" width="80" height="83" class="d-inline-block align-text-top">
-            <img src="C:\Users\Admin\OneDrive\Documents\my project\images\naac logo.png" alt="Logo" width="80" height="83" class="d-inline-block align-text-top">
+            <h1 style="color: white; text-align: center;">Santhiram Engineering College <br>(Autonomous)</h1>
+            <img src="{{url_for('static', filename='images/aictelogo.webp')}}" alt="Logo" width="80" height="83" class="d-inline-block align-text-top">
+            <img src="{{url_for('static', filename='images/nba logo.png')}}" alt="Logo" width="80" height="83" class="d-inline-block align-text-top">
+            <img src="{{url_for('static', filename='images/naac logo.png')}}" alt="Logo" width="80" height="83" class="d-inline-block align-text-top">
 
             <div class="btn-group">
               <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                 Login
               </button>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Login</a></li>
+                <li><a class="dropdown-item" href="{{url_for('login')}}">Login</a></li>
                 <li><a class="dropdown-item" href="#">Register</a></li>
               </ul>
             </div>
@@ -138,37 +138,37 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="project1.html">Home</a>
+                <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link" href="{{ url_for('about') }}">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="theme.html">Theme</a>
+                <a class="nav-link" href="{{ url_for('theme') }}">Theme</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="paper submission.html">Paper Submission</a>
+                <a class="nav-link" href="{{ url_for('paper_submission') }}">Paper Submission</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="important dates.html">Important Dates</a>
+                <a class="nav-link" href="{{ url_for('important_dates') }}">Important Dates</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="registration.html">Registration</a>
+                <a class="nav-link" href="{{ url_for('registration') }}">Registration</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="team.html">Team</a>
+                <a class="nav-link" href="{{ url_for('team') }}">Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="keynote.html">Keynote</a>
+                <a class="nav-link" href="{{ url_for('keynote') }}">Keynote</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="publication.html">Publication</a>
+                <a class="nav-link" href="{{ url_for('publication') }}">Publication</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Nearby locations.html">Nearby location</a>
+                <a class="nav-link" href="{{ url_for('nearby_locations') }}">Nearby location</a>
               </li>
             </ul>
           </div>
@@ -186,24 +186,24 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="2500">
-          <img src="C:\Users\Admin\OneDrive\Documents\my project\images\santhiram3.jpg" class="d-block w-100" alt="...">
+          <img src="{{url_for('static', filename='images/santhiram3.jpg')}}" class="d-block w-100" alt="...">
           <div class="carousel-caption d-md-block d-sm-block d-lg-block d-xl-block">
-            <h1>International Conference on Electronics and Communication Engineering <br>(ICECE-2025)</h1>
-            <p style="font-size: 25px; font-weight: 400; color: rgb(207, 205, 241);">Building a Smarter Future, United</p>
+            <h1><B>International Conference on Emerging Materials and Nano-Devices for Advanced Computing</B> <br>(ICEMNAC-2025)</h1>
+            <p style="font-size: 25px; font-weight: 400;">Building a Smarter Future, United</p>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="2500">
-          <img src="C:\Users\Admin\OneDrive\Documents\my project\images\santhiram2.jpg" class="d-block w-100" alt="...">
+          <img src="{{url_for('static', filename='images/santhiram1.jpg')}}" class="d-block w-100" alt="...">
           <div class="carousel-caption d-md-block">
-            <h1>International Conference on Electronics and Communication Engineering <br>(ICECE-2025)</h1>
-            <p style="font-size: 25px; font-weight: 400; color: rgb(207, 205, 241);">Building a Smarter Future, United</p>
+            <h1><B>International Conference on Emerging Materials and Nano-Devices for Advanced Computing</B> <br>(ICEMNAC-2025)</h1>
+            <p style="font-size: 25px; font-weight: 400;">Building a Smarter Future, United</p>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="2500">
-          <img src="C:\Users\Admin\OneDrive\Documents\my project\images\santhiram1.jpg" class="d-block w-100" alt="...">
+          <img src="{{url_for('static', filename='images/santhiram2.jpg')}}" class="d-block w-100" alt="...">
           <div class="carousel-caption d-md-block">
-            <h1>International Conference on Electronics and Communication Engineering <br>(ICECE-2025)</h1>
-            <p style="font-size: 25px; font-weight: 400; color: rgb(207, 205, 241);">Building a Smarter Future, United</p>
+            <h1><B>International Conference on Emerging Materials and Nano-Devices for Advanced Computing</B> <br>(ICEMNAC-2025)</h1>
+            <p style="font-size: 25px; font-weight: 400;;">Building a Smarter Future, United</p>
           </div>
         </div>
       </div>
@@ -268,7 +268,7 @@
               <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
               <div>
               <p style="text-align: center; padding-top: 10px;">Engage | Inspire</p>
-              <p style="text-align: center;">icaspace@srec.ac.in</p>
+              <p style="text-align: center;">emnac2026@gmail.com</p>
               <p style="text-align: center;">+918888888888</p>
               <h3>Enter your email address</h3>
               <p style="text-align: center;">Your email for updates</p>

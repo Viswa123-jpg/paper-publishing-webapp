@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='team.css') }}">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -12,44 +12,44 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="project1.html"><img src="C:\Users\Admin\OneDrive\Documents\my project\images\santhiramlogo1.png" alt="img" width="100" height="94"></a>
+      <a class="navbar-brand" href="project1.html"><img src="{{url_for('static', filename='images/santhiramlogo1.png')}}" alt="img" width="100" height="94"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="project1.html">Home</a>
+            <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" href="{{ url_for('about') }}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="theme.html">Theme</a>
+            <a class="nav-link" href="{{ url_for('theme') }}">Theme</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="paper submission.html">Paper Submission</a>
+            <a class="nav-link" href="{{ url_for('paper_submission') }}">Paper Submission</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="important dates.html">Important Dates</a>
+            <a class="nav-link" href="{{ url_for('important_dates') }}">Important Dates</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="registration.html">Registration</a>
+            <a class="nav-link" href="{{ url_for('registration') }}">Registration</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="team.html">Team</a>
+            <a class="nav-link" href="{{ url_for('team') }}">Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="keynote.html">Keynote</a>
+            <a class="nav-link" href="{{ url_for('keynote') }}">Keynote</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="publication.html">Publication</a>
+            <a class="nav-link" href="{{ url_for('publication') }}">Publication</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Nearby locations.html">Nearby location</a>
+            <a class="nav-link" href="{{ url_for('nearby_locations') }}">Nearby location</a>
           </li>
         </ul>
       </div>
@@ -63,45 +63,73 @@
      
     <main>
         <section class="content container my-4">
-                <h2>Patrons:</h2>
+                <h2>General Chairs:</h2>
                 <ul>
-                    <li>Dr.M.Santhiramudu , Chairman</li>
-                    <li>Mr.M.Sivaram , MD</li>
+                    <li>Dr.M.Santhiramudu </li>
+                    <li>Er.M.Sivaram </li>
                 </ul>
      
-                 <h2>Advisors:</h2>
+                 <h2>Program Chairs:</h2>
                  <ul>
-                    <li>Dr.Y.Mallikarjuna Rao , HOD-ECE , ISTE Member</li>
-                    <li>Dr.Y.Praveen Kumar Reddy , Assoc.prof , Dept of ECE , ISTE Member</li>
-                    <li>Mrs.V.Nagamani , Assoc.prof , Dept of ECE , ISTE Member</li>
-                    <li>Mr.N.Sreenivasa Rao , Assoc.prof , Dept of ECE</li>
-                    <li>Mr.S.Javid Basha , Assoc.prof , Dept of ECE</li>
-                    <li>Mr.S.Rambabu , Assoc.prof , Dept of ECE</li>
-                    <li>Mrs.S.Jayamangala , Assoc.prof , Dept of ECE</li>
+                    <li>Prof.M.V.Subramanyam</li>
                  </ul>
      
-                 <h2>Co-ordinatator:</h2>
+                 <h2>Prominent Program Committee members:</h2>
                  <ul>
-                    <li>Dr.G.Sowmya , Assoc.prof,Dept.of ECE</li>
+                    <li>Dr.G.Sowmya</li>
+                    <li>Mr.S.Rambabu</li>
+                    <li>Mrs.V.Nagamani</li>
+                    <li>Mr.N.Sreenivasa Rao</li>
+                    <li>Mrs.B.Alekhya Himabindu</li>
+                    <li>Mr.M.Mahesh Kumar</li>
+                    <li>Mr.S.Munnawar</li>
                  </ul>
      
-                 <h2>Conveners:</h2>
+                 <h2>Publications Committee:</h2>
                  <ul>
-                    <li>Dr.M.V.Subramanyam , Principal</li>
+                    <li>Dr.S.Javid Basha</li>
+                    <li>Dr.K.Rajkumar</li>
+                    <li>Dr.N.Praveen Kumar</li>
+                    <li>Mr.V.Sankarnath</li>
+                    <li>Mr.S.Mohammad Eliyas</li>
                  </ul>
      
-                 <h2>International Advisory Board:</h2>
+                 <h2>Finance Committee:</h2>
                  <ul>
-                    <li>Dr. David Benton, Professor, Aston University, Birmingham, England.</li>
-                    <li>Dr. Sudarshan Nelatury, PENN STATE BEHREND, 242, BURKE CENTER, ERIE PA 16563</li>
-                    <li>Dr. T. G. Thomas, Professor, BITS Pilani, Dubai, UAE</li>
+                    <li>Mr.V.Sankarnath</li>
+                    <li>Mr.S.Rambabu</li>
+                    <li>Mr.S.Mohammad Eliyas</li>
                  </ul>
 
-                 <h2>National Advisory Board:</h2>
+                 <h2>Publicity Committee:</h2>
                  <ul>
-                    <li>Dr. P.K.Jain, Professor, ECE & Director, NIT, Patna</li>
-                    <li>Dr. Narasimha Sarma N V S., Director, IIIT Trichy</li>
-                    <li>Dr. Anupam Sharma, Associate Director, DSP, DRDO, Hyderabad</li>
+                    <li>Mrs.P.Mary Swetha</li>
+                    <li>Mr.P.Surendra Babu</li>
+                    <li>Mrs.S.Jayamangala</li>
+                    <li>Mr.K.vinod Kumar</li>
+                    <li>Mrs.G.Neelima</li>
+                    <li>Mr.S.Gireesh Babu</li>
+                 </ul>
+
+                 <h2>Local Organizing Committee:</h2>
+                 <ul>
+                    <li>Dr.K.Rajkumar</li>
+                    <li>Dr.N.Praveen Kumar</li>
+                    <li>Dr.S.Javid Basha</li>
+                 </ul>
+
+                 <h2>Advisory Committee:</h2>
+                 <ul>
+                    <li>Prof.B.Anuradha, S V University</li>
+                    <li>Prof.D.Vishnu Vardhan, JNTUA</li>
+                    <li>Prof.T.Narendra, NIT-Warangal</li>
+                    <li>Dr.V.Narendra Kumar, NIT-Warangal</li>
+                    <li>Dr.Manoj Kumar mujumder, IIT-Naya Raipur</li>
+                    <li>Prof.V.Vijaya Kishore, KSRM</li>
+                    <li>Dr.C.Shiv Nath, DHMIER</li>
+                    <li>Dr.B.Naresh Kumar Reddy</li>
+                    <li>Dr.N.Geetha Rani, JNTUA</li>
+                    <li>Dr.Bukke Chandrababu Naik, NIT-Trichy</li>
                  </ul>
              </section>
          </main>     
@@ -117,7 +145,7 @@
                     <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
                     <div>
                     <p style="text-align: center; padding-top: 10px;">Engage | Inspire</p>
-                    <p style="text-align: center;">icaspace@srec.ac.in</p>
+                    <p style="text-align: center;">emnac2026@gmail.com</p>
                     <p style="text-align: center;">+918888888888</p>
                     <h3>Enter your email address</h3>
                     <p style="text-align: center;">Your email for updates</p>

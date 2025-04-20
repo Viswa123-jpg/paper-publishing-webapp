@@ -41,6 +41,14 @@ marquee{
   text-align: justify;
   margin: 0 0 15px 0;
 }
+
+.image img{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
 .footer{
   background-color: #1E293B;
   color: white;
