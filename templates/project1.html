@@ -118,17 +118,8 @@
             <img src="{{url_for('static', filename='images/nba logo.png')}}" alt="Logo" width="80" height="83" class="d-inline-block align-text-top">
             <img src="{{url_for('static', filename='images/naac logo.png')}}" alt="Logo" width="80" height="83" class="d-inline-block align-text-top">
 
-            <div class="btn-group">
-              <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                Login
-              </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="{{url_for('auth.login')}}">Login</a></li>
-                <li><a class="dropdown-item" href="#">Register</a></li>
-                <li><a class="dropdown-item" href="#">{{ session['username'] }}</a></li>
-              </ul>
-            </div>
-          Logged In: {{ session['username'] }}
+            <a class="btn btn-info" href="{{url_for('login')}}" role="button">Login</a>
+            Logged In: {{ session['username'] }}
         </div>
       </nav>
 
@@ -138,39 +129,39 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mx-auto">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('main.about') }}">About</a>
+                <a class="nav-link" href="{{ url_for('about') }}">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('main.theme') }}">Theme</a>
+                <a class="nav-link" href="{{ url_for('theme') }}">Theme</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('main.paper_submission') }}">Paper Submission</a>
+                <a class="nav-link" href="{{ url_for('paper_submission') }}">Paper Submission</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('main.important_dates') }}">Important Dates</a>
+                <a class="nav-link" href="{{ url_for('important_dates') }}">Important Dates</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('auth.signup') }}">Registration</a>
+                <a class="nav-link" href="{{ url_for('registration') }}">Registration</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('main.team') }}">Team</a>
+                <a class="nav-link" href="{{ url_for('team') }}">Team</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('main.keynote') }}">Keynote</a>
+                <a class="nav-link" href="{{ url_for('keynote') }}">Keynote</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('main.publication') }}">Publication</a>
+                <a class="nav-link" href="{{ url_for('publication') }}">Publication</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('main.contact') }}">Contact Us</a>
+                <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('main.nearby_locations') }}">Nearby location</a>
+                <a class="nav-link" href="{{ url_for('nearby_locations') }}">Nearby location</a>
               </li>
             </ul>
           </div>

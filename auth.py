@@ -13,7 +13,7 @@ bcrypt = Bcrypt()
 @auth.route('/signup', methods=['GET', 'POST'])
 def signup():
     if request.method == 'POST':
-        username = request.form['first_name']
+        username = request.form['email_id']
         password = bcrypt.generate_password_hash(request.form['password']).decode('utf-8')
         #role = request.form['role']  # admin, editor, or viewer
         new_user = user(username=username, password=password, role='user')
@@ -26,7 +26,7 @@ def signup():
 @auth.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        new_user = user.query.filter_by(username=request.form['username']).first()
+        new_user = user.query.filter_by(username=request.form['email_id']).first()
         if new_user and bcrypt.check_password_hash(new_user.password, request.form['password']):
             login_user(new_user)
             session['logged_in'] = True
