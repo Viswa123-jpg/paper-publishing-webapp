@@ -4,6 +4,7 @@ from flask import Flask, render_template, request,  jsonify, send_file
 from models import author_submission, db
 from datetime import date
 import time
+from io import BytesIO
 
 # Get the current system date
 current_date = date.today()
@@ -48,6 +49,7 @@ def delete(id):
 
 
 @main.route('/call_for_papers')
+@role_required('admin')
 def call_for_papers():
     papers = db.session.query(author_submission).all()
     return render_template('call_for_papers.html', papers=papers, total=len(papers))

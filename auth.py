@@ -32,6 +32,7 @@ def login():
             login_user(new_user)
             session['logged_in'] = True
             session['username'] = new_user.full_name
+            session['role'] = new_user.user_role
             flash('Login successful!', 'success')
             return redirect(url_for('main.home'))
         else:
@@ -50,7 +51,7 @@ def role_required(*roles):
     def wrapper(func):
         @wraps(func)
         def decorated_view(*args, **kwargs):
-            if current_user.role not in roles:
+            if current_user.user_role not in roles:
                 return abort(403)  # Forbidden access
             return func(*args, **kwargs)
         return decorated_view

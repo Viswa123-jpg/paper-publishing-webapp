@@ -54,10 +54,10 @@
                 <td>{{ paper.author_name }}</td>
                 <td>{{ paper.keywords }}</td>
                 <td>
-                    <a href="{{ url_for('download', id=paper.id) }}" class="btn btn-primary">Download</a>
+                    <a href="{{ url_for('main.download', id=paper.id) }}" class="btn btn-primary">Download</a>
                 </td>
                 <td>
-                    <a href="{{ url_for('delete', id=paper.id) }}" class="btn btn-primary">Delete</a>
+                    <a href="{{ url_for('main.delete', id=paper.id) }}" class="btn btn-primary">Delete</a>
                 </td>
             </tr>
             {% endfor %}

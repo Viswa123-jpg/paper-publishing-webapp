@@ -35,7 +35,7 @@ class user(db.Model, UserMixin):
     user_role = db.Column(db.String(50), nullable=False, default='viewer')
 
     def __repr__(self):
-        return f"<User {self.username} - Role: {self.role}>"
+        return f"<User {self.username} - Role: {self.user_role}>"
 
     def __init__(self, username, password, role, fullname):
         self.username = username

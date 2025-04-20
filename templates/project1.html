@@ -168,6 +168,11 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('main.publication') }}">Publication</a>
               </li>
+              {% if session['role'] == 'admin' %}
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('main.call_for_papers') }}">Papers</a>
+              </li>
+              {% endif %}
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('main.contact') }}">Contact Us</a>
               </li>
