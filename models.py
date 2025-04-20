@@ -30,13 +30,15 @@ class user(db.Model, UserMixin):
     __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(150), unique=True, nullable=False)
+    full_name = db.Column(db.String(150), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)
     user_role = db.Column(db.String(50), nullable=False, default='viewer')
 
     def __repr__(self):
         return f"<User {self.username} - Role: {self.role}>"
 
-    def __init__(self, username, password, role):
+    def __init__(self, username, password, role, fullname):
         self.username = username
         self.password = password
         self.user_role = role
+        self.full_name = fullname

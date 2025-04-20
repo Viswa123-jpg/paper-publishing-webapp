@@ -16,8 +16,9 @@ create table paper_publications (
 
 CREATE TABLE IF NOT EXISTS users (
 
-        id bigint NOT NULL auto_increment,
+        id bigint NOT NULL AUTO_INCREMENT,
         username VARCHAR(150) NOT NULL,
+        full_name VARCHAR(150) NOT NULL,
         password VARCHAR(500) NOT NULL,
         user_role char(50) NOT NULL DEFAULT 'normal_user',
         PRIMARY KEY(id)

@@ -14,9 +14,10 @@ bcrypt = Bcrypt()
 def signup():
     if request.method == 'POST':
         username = request.form['email_id']
+        fullname = request.form['fullname']
         password = bcrypt.generate_password_hash(request.form['password']).decode('utf-8')
         #role = request.form['role']  # admin, editor, or viewer
-        new_user = user(username=username, password=password, role='user')
+        new_user = user(username=username, password=password, role='user', fullname=fullname)
         db.session.add(new_user)
         db.session.commit()
         flash('Account created successfully!', 'success')
@@ -30,7 +31,7 @@ def login():
         if new_user and bcrypt.check_password_hash(new_user.password, request.form['password']):
             login_user(new_user)
             session['logged_in'] = True
-            session['username'] = new_user.username
+            session['username'] = new_user.full_name
             flash('Login successful!', 'success')
             return redirect(url_for('main.home'))
         else:
