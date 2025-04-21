@@ -272,12 +272,12 @@ marquee{
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="project1.html"><img src="{{url_for('static', filename='images/santhiramlogo1.png')}}" alt="img" width="100" height="94"></a>
+          <a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{url_for('static', filename='images/santhiramlogo1.png')}}" alt="img" width="100" height="94"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mx-auto">
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
               </li>
@@ -352,6 +352,26 @@ marquee{
             <button type="submit">Submit Paper</button>
         </form>
     </div>
+  
+    <div class="card text-bg-light mb-3 col-sm-12 col-md-6 col-lg-6 col-12 container" style="max-width: 100rem;">
+      <div class="card-header text-bg-primary card-title"><h4>Guidelines :</h4></div>
+      <div class="card-body">
+        <ul>
+          <li>maxmimum size 50kb.</li>
+          <li>Paper should be in English.</li>
+          <li>Paper should be in DOC/DOCX format.</li>
+          <li>Paper should be in A4 size.</li>
+          <li>Paper should be in 1.5 line spacing.</li>
+          <li>Paper should be in 12 font size.</li>
+          <li>Paper should be in Times New Roman font.</li>
+          <li>Paper should be in 1 inch margin.</li>
+          <li>Paper should be in 2 column format.</li>
+          <li>Paper should be in IEEE format.</li>
+          <li>Paper should be in 12 pages.</li>
+          <li>plagiarism checking result should be 11</li>
+        </ul>
+      </div>
+    </div>
 
     <!-- Paper Archive Section -->
     <div class="archive-container">
@@ -411,7 +431,7 @@ marquee{
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
-  </script>
+  </script> 
 </body>
 
 </html>
