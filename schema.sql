@@ -1,8 +1,7 @@
-create database santhiram_clg;
+CREATE DATABASE IF NOT EXISTS santhiram_clg;
 
-use santhiram_clg;
+USE santhiram_clg;
 
-drop table paper_publications;
 create table paper_publications (
 	id int primary key auto_increment,
     submission_date date,
@@ -13,4 +12,14 @@ create table paper_publications (
     title varchar(500),
     abstract varchar(500),
     keywords varchar(500)
-    )
+    );
+
+CREATE TABLE IF NOT EXISTS users (
+
+        id bigint NOT NULL AUTO_INCREMENT,
+        username VARCHAR(150) NOT NULL,
+        full_name VARCHAR(150) NOT NULL,
+        password VARCHAR(500) NOT NULL,
+        user_role char(50) NOT NULL DEFAULT 'normal_user',
+        PRIMARY KEY(id)
+);
