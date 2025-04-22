@@ -33,7 +33,11 @@ def login():
             session['logged_in'] = True
             session['username'] = new_user.full_name
             session['role'] = new_user.user_role
+            session['email_id'] = new_user.username
             flash('Login successful!', 'success')
+            if session.__contains__('url'):
+                redirect_url = session['url']
+                return redirect(url_for(redirect_url))
             return redirect(url_for('main.home'))
         else:
             flash('Login failed. Please check your credentials.', 'danger')

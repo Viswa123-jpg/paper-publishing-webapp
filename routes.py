@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 from auth import role_required
-from flask import Flask, render_template, request,  jsonify, send_file
+from flask import Flask, render_template, request,  jsonify, send_file, session, Response
 from models import author_submission, db
 from datetime import date
 import time
@@ -59,25 +59,31 @@ def paper_submission():
     if request.method == 'GET':
         return render_template('paper_submission.html')
     else:
-        title = request.form['title']
-        abstract = request.form['abstract']
-        keywords = request.form['keywords']
-        file = request.files['file']
-        data = file.read()
-        file_name = file.filename
-        print("Title:", title)
-        print("Abstract:", abstract)
-        print("File name:", file.filename)
-        paper_pub = author_submission(title=title, abstract=abstract, keywords=keywords,
-                                      file_content=data, file_name=file_name, submission_date=current_date,
-                                      author_name="Author Name",
-                                      user_name="User Name")
+        if not session.__contains__('email_id'):
+            print('user not logged in')
+            session['url'] = 'main.paper_submission'
+            return Response("{'message': 'unauthorized'}", status=401, mimetype='application/json')
+        else:
+            print('user logged in')
+            title = request.form['title']
+            abstract = request.form['abstract']
+            keywords = request.form['keywords']
+            file = request.files['file']
+            data = file.read()
+            file_name = file.filename
+            print("Title:", title)
+            print("Abstract:", abstract)
+            print("File name:", file.filename)
+            paper_pub = author_submission(title=title, abstract=abstract, keywords=keywords,
+                                          file_content=data, file_name=file_name, submission_date=current_date,
+                                          author_name="Author Name",
+                                          user_name="User Name")
 
-        print(f"started at: {time.strftime('%X')}")
-        db.session.add(paper_pub)
-        db.session.commit()
-        print(f"ended at: {time.strftime('%X')}")
-        return render_template('paper_submission.html')
+            print(f"started at: {time.strftime('%X')}")
+            db.session.add(paper_pub)
+            db.session.commit()
+            print(f"ended at: {time.strftime('%X')}")
+            return render_template('paper_submission.html')
 
 @main.route('/important_dates')
 def important_dates():

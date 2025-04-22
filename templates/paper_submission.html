@@ -430,9 +430,13 @@ marquee{
       });
 
       if (response.ok) {
-
         Swal.fire("File uploaded successfully!");
-      } else {
+      }
+      else if (response.status === 401) {
+        Swal.fire("Login required for file upload!");
+        window.location.href = "login";
+      }
+      else {
         Swal.fire("Error uploading file. Please try again after sometime");
       }
     } catch (error) {
