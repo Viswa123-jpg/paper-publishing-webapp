@@ -37,13 +37,15 @@ def login():
             return redirect(url_for('main.home'))
         else:
             flash('Login failed. Please check your credentials.', 'danger')
-    return render_template('login.html')
+            return render_template('login.html', login_failed='True')
+    return render_template('login.html', login_failed='False')
 
 @auth.route('/logout')
 @login_required
 def logout():
     session.pop('logged_in')
     session.pop('username')
+    session.pop('role')
     logout_user()
     return redirect(url_for('main.home'))
 

@@ -18,7 +18,7 @@ def home():
 
 @main.route('/login')
 def login():
-    return render_template('login.html')
+    return render_template('login.html', login_failed='False')
 
 @main.route('/about')
 def about():

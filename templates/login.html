@@ -53,6 +53,11 @@
         </div>
     </nav>
     <div class="auth-container">
+        {% if login_failed=='True' %}
+            <div class="alert alert-danger" role="alert">
+                Invalid Username/Password
+            </div>
+        {% endif %}
         <!-- Login Form -->
         <div id="login-form">
             <form method="POST", action="/login">

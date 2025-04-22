@@ -20,8 +20,8 @@ login_manager = LoginManager()
 
 db_name = 'santhiram_clg'
 DB_HOST = os.getenv('DB_HOST', 'localhost')
-DB_USERNAME = os.getenv('DB_USERNAME', 'root')
-DB_PASSWORD = os.getenv('DB_PASSWORD', 'root')
+DB_USERNAME = os.getenv('DB_USERNAME', 'krishna')
+DB_PASSWORD = os.getenv('DB_PASSWORD', 'Naruto#162')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://' + DB_USERNAME + ':' + DB_PASSWORD + '@' + DB_HOST + ':3306/' + db_name
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
