@@ -267,6 +267,11 @@ marquee{
             text-decoration: underline;
         }
     </style>
+
+    <!-- import jQuery lib-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.19.1/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.19.1/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -336,7 +341,7 @@ marquee{
     <!-- Paper Submission Form -->
     <div class="container">
         <h2>Paper Submission Form</h2>
-        <form method="POST" enctype="multipart/form-data">
+        <form method="POST" enctype="multipart/form-data" id="file_upload_form">
             <label for="title">Paper Title</label>
             <input type="text" id="title" name="title" required>
 
@@ -411,6 +416,30 @@ marquee{
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
+
+  const form = document.getElementById('file_upload_form');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('/paper_submission', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+
+        Swal.fire("File uploaded successfully!");
+      } else {
+        Swal.fire("Error uploading file. Please try again after sometime");
+      }
+    } catch (error) {
+      console.error('Network error:', error);
+      Swal.fire("Error uploading file. Please try again after sometime");
+    }
+  });
   </script>
 </body>
 
