@@ -50,6 +50,7 @@ def logout():
     session.pop('logged_in')
     session.pop('username')
     session.pop('role')
+    session.pop('email_id')
     logout_user()
     return redirect(url_for('main.home'))
 

@@ -112,3 +112,21 @@ def contact():
 @main.route('/nearby_locations')
 def nearby_locations():
     return render_template('nearby_locations.html')
+
+@main.route('/send-otp', methods = ['POST'])
+def send_otp():
+    from app import mail_service
+    data = request.get_json()
+    print(data)
+    mail_service.send_otp(recipient=data['email_id'])
+
+@main.route('/verify-email', methods = ['POST'])
+def verify_email():
+    from mail_service import verify_email
+    data = request.get_json()
+    print(data)
+    verified = verify_email(recipient=data['email_id'], otp=data['otp'])
+    if verified:
+        return Response("{'verified': 'true'}", status=200, mimetype='application/json')
+    else:
+        return Response("{'verified': 'false'}", status=200, mimetype='application/json')

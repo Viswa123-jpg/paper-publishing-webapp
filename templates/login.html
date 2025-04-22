@@ -40,6 +40,9 @@
         display: none;
       }
     </style>
+
+    <!-- import jQuery lib-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
 <header>
@@ -79,11 +82,15 @@
             <form method="POST" action="/signup">
                 <div class="mb-3">
                     <label>Full Name</label>
-                    <input type="text" name="fullname" class="form-control" required>
+                    <input type="text" name="fullname" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label>Email address</label>
-                    <input type="email" name="email_id" class="form-control" required>
+                    <input type="email" id="email_id" name="email_id" class="form-control" required>
+                    <input type="hidden" id="email_verify" name="email_id_verified" class="form-control" required value="false">
+                    <span>
+
+                    </span>
                 </div>
                 <div class="mb-3">
                     <label>Password</label>
@@ -92,6 +99,9 @@
                 <button class="btn btn-success w-100">Register</button>
                 <a href="#" class="form-link" onclick="showForm('login-form')">Already have an account? Login</a>
             </form>
+            <button class="btn btn-success w-100" id="validate_email">Verify email</button>
+            <input type="text" id="otp" name="otp" class="form-control" required>
+            <button class="btn btn-success w-100" id="validate_otp">Validate OTP</button>
         </div>
 
         <div id="forgot-form" class="hidden">
@@ -114,6 +124,51 @@
 
           document.getElementById(formId).classList.remove('hidden');
         }
+
+        $(document).ready(function() {
+            $("#validate_email").click(function() {
+                const emailId = document.getElementById('email_id').value;
+                $.ajax({
+                    type: "POST",
+                    url: "/send-otp", // Flask route
+                    data: JSON.stringify({ 'email_id': emailId }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function(response) {
+                        console.log(response); // Handle the response from Flask
+                    },
+                    error: function(error) {
+                        console.error("Error:", error);
+                    }
+                });
+            });
+
+            $("#validate_otp").click(function() {
+                const emailId = document.getElementById('email_id').value;
+                const otp = document.getElementById('otp').value;
+                $.ajax({
+                    type: "POST",
+                    url: "/verify-email", // Flask route
+                    data: JSON.stringify({ 'email_id': emailId, 'otp': otp }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function(response) {
+                        alert('otp verified');
+                        console.log(response); // Handle the response from Flask
+                    },
+                    error: function(error) {
+                        if (error.status == 200) {
+                            alert('otp verified');
+                        }
+                        else {
+                            alert('otp verified failed');
+                            console.error("Error:", error);
+                        }
+
+                    }
+                });
+            });
+        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
