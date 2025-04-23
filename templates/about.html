@@ -19,37 +19,37 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
+            <a class="nav-link" aria-current="page" href="{{ url_for('main.home') }}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+            <a class="nav-link" href="{{ url_for('main.about') }}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('theme') }}">Theme</a>
+            <a class="nav-link" href="{{ url_for('main.theme') }}">Theme</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('paper_submission') }}">Paper Submission</a>
+            <a class="nav-link" href="{{ url_for('main.paper_submission') }}">Paper Submission</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('important_dates') }}">Important Dates</a>
+            <a class="nav-link" href="{{ url_for('main.important_dates') }}">Important Dates</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('registration') }}">Registration</a>
+            <a class="nav-link" href="{{ url_for('main.registration') }}">Registration</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('team') }}">Team</a>
+            <a class="nav-link" href="{{ url_for('main.team') }}">Team</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('keynote') }}">Keynote</a>
+            <a class="nav-link" href="{{ url_for('main.keynote') }}">Keynote</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('publication') }}">Publication</a>
+            <a class="nav-link" href="{{ url_for('main.publication') }}">Publication</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('contact') }}">Contact Us</a>
+            <a class="nav-link" href="{{ url_for('main.contact') }}">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('nearby_locations') }}">Nearby location</a>
+            <a class="nav-link" href="{{ url_for('main.nearby_locations') }}">Nearby location</a>
           </li>
         </ul>
       </div>
@@ -88,12 +88,16 @@
         <p>Anticipating the significance of the electronics and wireless communication realistic rolein the society, industry and among the public, the Department of Electronics and Communication Engineering has been started carrying up its rationale since 2007 concentrating and imparting electronic & technological solutions in to the young minds of the Society.</p>
         <p>The Department was initially started with an intake of 60 seats since the opportunities are stupendous and the increase in demand for the production of engineers itis upgraded to 90 seats in 2008. The intake has increased further to 120 in the year 2009. Forecasting the tremendous growth & opportunities in VLSI, the Department also started a Master of Technology (M. Tech) program in VLSI System Design in the year 2011 with an intake of 12 seats. The department received an ISO 9001:2015 certification for its qualitative functioning. The objectives of the department include: to produce quality engineers, indulge in research and promote the students to be active in entrepreneurship.</p>
         <p>The faculty has been involved in teaching and research in the diverse aspects such as Wireless Communications & Networking, Microelectronics and VLSI, Digital Image Processing and Antenna design. The department has state of the art laboratories. The faculty is entrusted to bring fine research, developmental and design experience into the classroom, ensuring that our students are being treated as professional engineers in all parts of global engineering and the scientific community. The department extends its unwavering support for the growth of every student fulfilling their dreams. The department also extended its support to groom and nurture the qualities of teamwork, leadership, mutual understanding and co-ordination providing exposure to public and executive communication.</p>
+        <p>Anticipating the growing significance of electronics and wireless communication in society, industry, and public life, the Department of Electronics and Communication Engineering was established in 2007 with a vision to impart quality technical education and foster innovation among young minds. The department initially commenced with an intake of 60 students, which was increased to 90 in 2008 and further to 120 in 2009, in response to the rising demand for skilled engineers. Forecasting the immense potential in VLSI design, a Master of Technology (M.Tech) program in VLSI System Design was introduced in 2011 with an intake of 18 students. In line with emerging industry needs, a new postgraduate program, M.Tech in Embedded Systems, was launched in the academic year 2024–25 with an intake of 18 students. Further, from the academic year 2025–26, the B.Tech intake has been increased to 180 students. The B.Tech-ECE program has been accredited by the National Board of Accreditation (NBA) for a period of three years, from AY 2023–24 to AY 2025–26, in recognition of its quality academic processes and outcomes. The department is also a recognized research center under Jawaharlal Nehru Technological University Anantapur (JNTUA), enabling scholars to pursue Ph.D. programs in both regular and part-time modes.</p>
+        <p>To bridge the gap between academia and industry, the department has established Memoranda of Understanding (MoUs) with several reputed industries and institutions. These collaborations facilitate internships, hands-on training, and exposure to advanced technologies, thereby enhancing the students' technical skills and industry readiness. The department aims to produce competent engineers, promote cutting-edge research, and encourage innovation and entrepreneurship among students. Faculty members are actively engaged in teaching and research across diverse domains such as Wireless Communications and Networking, Microelectronics and VLSI, Embedded Systems, Digital Image Processing, and Antenna Design. The department houses state-of-the-art laboratories to support advanced learning and research activities.</p>
+        <p>Our dedicated faculty integrate real-world research and design expertise into the classroom, ensuring students are equipped to perform as professional engineers in the global engineering and scientific community. The faculty members have made significant contributions to research, having published numerous papers in reputed SCI, SCIE, ESCI, and Scopus-indexed journals. These publications reflect the department’s active involvement in cutting-edge research and its commitment to academic excellence. The department and its faculty have received numerous accolades and national-level recognition for their excellence in teaching, research, and innovation. They have successfully secured several funded projects from prestigious agencies such as DST, UGC, AICTE, IE(I), and other central and state government funding organizations, showcasing their strong research capabilities and commitment to societal impact.</p>
+        <p>The department remains committed to the holistic development of students by fostering leadership, teamwork, mutual understanding, and effective communication. Through various academic, co-curricular, and industry-interfacing initiatives, students are encouraged to fulfill their aspirations and emerge as responsible and capable professionals.</p>
       </div>
 
       <div class="image col-sm-12 col-md-6 col-lg-6 col-12 m-auto text-end" data-aos="fade-up-right">
-        <img src="{{url_for('static', filename='images/santhiram1.jpg')}}" alt="" width="500" height="400" class="img-fluid img-thumbnail">
+        <img src="{{url_for('static', filename='images/santhiram1.jpg')}}" alt="" width="500" height="500px" class="img-fluid img-thumbnail">
     </div>
-  </div>
+  </div>  
  </section>
 
  <section class="footer">
