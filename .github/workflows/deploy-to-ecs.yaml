@@ -49,7 +49,7 @@ jobs:
       id: meta
       uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
       with:
-          images: cskblackhawk/paper-publishing-webapp:${{ env.RUN_ID }}
+          images: cskblackhawk/paper-publishing-webapp
 
     - name: Build and push Docker image
       id: push
@@ -58,7 +58,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ env.RUN_ID }}
           labels: ${{ steps.meta.outputs.labels }}
 
     - name: Fill in the new image ID in the Amazon ECS task definition
