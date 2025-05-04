@@ -17,6 +17,7 @@ env:
   ECS_SERVICE: 'paper-publishing-webapp-service'
   ECS_CLUSTER: 'Shanthiram_Cluster'
   CONTAINER_NAME: 'paper-publishing-webapp'
+  ECS_TASK_DEFINITION_ARN: 'arn:aws:ecs:ap-south-1:655691758661:task-definition/paper-publishing-webapp:6'
 
 permissions:
   contents: read
