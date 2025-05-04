@@ -14,10 +14,9 @@ env:
   RUN_ID: ${{ github.run_id }}
   AWS_REGION: 'ap-south-1'
   ECR_REPOSITORY: 'dev/localkart'
-  ECS_SERVICE: 'store-app-service'
-  ECS_CLUSTER: 'store-app-cluster'
-  ECS_TASK_DEFINITION: '.aws/task-definition.json'
-  CONTAINER_NAME: 'store-app-frontend'
+  ECS_SERVICE: 'paper-publishing-webapp-service'
+  ECS_CLUSTER: 'Shanthiram_Cluster'
+  CONTAINER_NAME: 'paper-publishing-webapp'
 
 permissions:
   contents: read
