@@ -14,7 +14,7 @@ env:
   RUN_ID: ${{ github.run_id }}
   AWS_REGION: 'ap-south-1'
   ECR_REPOSITORY: 'dev/localkart'
-  ECS_SERVICE: 'paper-publishing-webapp-service'
+  ECS_SERVICE: 'paper-pub-webapp'
   ECS_CLUSTER: 'Shanthiram_Cluster'
   CONTAINER_NAME: 'paper-publishing-webapp'
   ECS_TASK_DEFINITION_ARN: 'arn:aws:ecs:ap-south-1:655691758661:task-definition/paper-publishing-webapp:6'
