@@ -4,19 +4,16 @@ on:
   push:
     branches: [ "main" ]
   workflow_dispatch:
-      inputs:
-        branch:
-          description: 'branch'
-          required: true
-          default: 'main'
+
 
 env:
+  RUN_ID: ${{ github.run_id }}
   AWS_REGION: 'ap-south-1'
   ECR_REPOSITORY: 'dev/localkart'
-  ECS_SERVICE: 'store-app-service'
-  ECS_CLUSTER: 'store-app-cluster'
-  ECS_TASK_DEFINITION: '.aws/task-definition.json'
-  CONTAINER_NAME: 'store-app-frontend'
+  ECS_SERVICE: 'paper-pub-webapp'
+  ECS_CLUSTER: 'Shanthiram_Cluster'
+  CONTAINER_NAME: 'paper-publishing-webapp'
+  ECS_TASK_DEFINITION_ARN: 'arn:aws:ecs:ap-south-1:655691758661:task-definition/paper-publishing-webapp:6'
 
 permissions:
   contents: read
@@ -60,33 +57,13 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
 
-    - name: Generate artifact attestation
-      uses: actions/attest-build-provenance@v2
-      with:
-          subject-name: index.docker.io/cskblackhawk/paper-publishing-webapp
-          subject-digest: ${{ steps.push.outputs.digest }}
-          push-to-registry: true
-
-    - name: Build, tag, and push image to Amazon ECR
-      id: build-image
-      env:
-        ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        IMAGE_TAG: ${{ github.sha }}
-      run: |
-        # Build a docker container and
-        # push it to ECR so that it can
-        # be deployed to ECS.
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-        echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_OUTPUT
-
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
       with:
         task-definition-arn: ${{ env.ECS_TASK_DEFINITION_ARN }}
         container-name: ${{ env.CONTAINER_NAME }}
-        image: ${{ steps.build-image.outputs.image }}
+        image: ${{ steps.meta.outputs.tags }}
 
     - name: Deploy Amazon ECS task definition
       uses: aws-actions/amazon-ecs-deploy-task-definition@v2
