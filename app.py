@@ -1,4 +1,7 @@
+
+import flask
 from flask import Flask, render_template, request,  jsonify, send_file
+from flask_socketio import SocketIO
 from flask_sqlalchemy import SQLAlchemy
 from io import BytesIO
 from sqlalchemy.sql import text
@@ -8,9 +11,11 @@ from wtforms import FileField, SubmitField
 from werkzeug.utils import secure_filename
 from models import author_submission, user, db
 from mail_service import mail_service
+import time
 from flask_bcrypt import Bcrypt
 from flask_login import LoginManager
 from auth import bcrypt
+from event_publisher import socketio
 
 import os
 
@@ -41,6 +46,8 @@ mail_service = mail_service(
     smtp_port=587,
     username='emnac2026@gmail.com',
     password='hmzh dtpa raey frzs')
+
+socketio.init_app(app)
 
 #mail_service.send_email('viswachityala@gmail.com', 'test', 'test')
 

@@ -1,10 +1,13 @@
+import flask
 from flask import Blueprint, render_template
 from auth import role_required
 from flask import Flask, render_template, request,  jsonify, send_file, session, Response
+
 from models import author_submission, db
 from datetime import date
 import time
 from io import BytesIO
+from event_publisher import publish
 
 # Get the current system date
 current_date = date.today()
@@ -83,6 +86,7 @@ def paper_submission():
             db.session.add(paper_pub)
             db.session.commit()
             print(f"ended at: {time.strftime('%X')}")
+            publish()
             return render_template('paper_submission.html')
 
 @main.route('/important_dates')
@@ -130,3 +134,6 @@ def verify_email():
         return Response("{'verified': 'true'}", status=200, mimetype='application/json')
     else:
         return Response("{'verified': 'false'}", status=200, mimetype='application/json')
+
+def total_published_papers():
+    return db.session.query(author_submission).count();

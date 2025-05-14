@@ -45,6 +45,13 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('main.publication') }}">Publication</a>
           </li>
+            {% if session['role'] == 'admin' %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('main.call_for_papers') }}">Papers
+                    <span id="notification_count" class="badge rounded-pill bg-danger"></span>
+                </a>
+            </li>
+            {% endif %}
           <li class="nav-item">
             <a class="nav-link" href="{{ url_for('main.contact') }}">Contact Us</a>
           </li>

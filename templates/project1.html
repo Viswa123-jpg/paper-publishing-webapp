@@ -6,6 +6,36 @@
     <title>International Conference</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <script>
+
+      // Set cookie if it doesn't exist
+      function setCookie(name, value) {
+          if (!getCookie(name)) { // Check if cookie already exists
+              document.cookie = name + "=" + value + "; path=/";
+          }
+      }
+
+      // Get cookie value
+      function getCookie(name) {
+          let cookies = document.cookie.split("; ");
+          for (let cookie of cookies) {
+              let [key, value] = cookie.split("=");
+              if (key === name) return parseInt(value);
+          }
+          return null;
+      }
+
+      function updateUnreadCount() {
+        var unreadCount = getCookie("unread_count");
+        if (unreadCount != null && unreadCount > 0) {
+          document.getElementById('notification_count').innerText = unreadCount;
+        }
+        if (unreadCount === 0) {
+           document.getElementById('notification_count').innerText = '';
+        }
+      }
+    </script>
     <style>
       .head{
         display: inline-flex;
@@ -142,7 +172,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="{{ url_for('home') }}">Home</a>
+                <a class="nav-link" aria-current="page" href="{{ url_for('main.home') }}">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('main.about') }}">About</a>
@@ -170,8 +200,13 @@
               </li>
               {% if session['role'] == 'admin' %}
               <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('main.call_for_papers') }}">Papers</a>
+                <a class="nav-link" href="{{ url_for('main.call_for_papers') }}">Papers
+                    <span id="notification_count" class="badge rounded-pill bg-danger"></span>
+                </a>
               </li>
+              <script>
+                updateUnreadCount();
+              </script>
               {% endif %}
               <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('main.contact') }}">Contact Us</a>
@@ -294,5 +329,23 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <script defer>
+      var count = getCookie("unread_count");
+    if (getCookie("unread_count") == null) {
+      setCookie("unread_count", 0);
+    }
+    console.log('script executing');
+    var socket = io.connect('http://localhost:5000');
+    console.log('connection to server established.');
+    console.log(document.getElementById('notification_count').innerText);
+    socket.on('file_uploaded', function(data) {
+        count += 1;
+        console.log(count);
+        console.log(document.getElementById('notification_count').innerText);
+        document.getElementById('notification_count').innerText = count;
+        document.cookie = "unread_count" + "=" + count + "; path=/";
+    });
+    </script>
 </body>
 </html>
