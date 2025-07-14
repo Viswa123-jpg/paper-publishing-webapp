@@ -39,6 +39,13 @@
     .hidden {
       display: none;
     }
+    marquee{
+        border: 2px;
+        background-image: linear-gradient(to right,#004080 , #1E293B);
+        line-height: 40px;
+        color: white;
+        font-size: 1rem;
+      }
     </style>
 </head>
 <body>
@@ -100,6 +107,10 @@
             </form>
         </div>
     </div>
+
+    <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+        Designed by Viswanath Reddy, Mahesh, Bhargav, Keerthi - SREC Students under the guidance of V. Sankarnath, Asst Prof, Dept of ECE.
+     </marquee>
 
 
     <script>

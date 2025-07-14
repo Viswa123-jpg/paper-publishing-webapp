@@ -48,36 +48,6 @@ marquee{
   color: white;
   font-size: 1rem;
 }
-        .header {
-            background-color: rgba(30, 41, 59, 0.95);
-            color: #FFFFFF;
-            text-align: center;
-            padding: 20px;
-            font-size: 28px;
-            font-weight: bold;
-            text-transform: uppercase;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            position: relative;
-            margin: auto;
-            bottom: 7px;
-            
-        }
-
-        .logo {
-            height: 70px;
-            transition: transform 0.3s ease-in-out, filter 0.5s ease-in-out;
-        }
-
-        .logo:hover {
-            transform: scale(1.1);
-            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
-        }
-
         .container {
             max-width: 1100px;
             width: 90%;
@@ -300,14 +270,10 @@ marquee{
   <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
     Welcome to Santhiram Engineering College (Autonomous)
  </marquee>
-    <div class="header">
-        <img src="{{url_for('static', filename='images/santhiramlogo1.png')}}" alt="Santhiram Engineering College Logo" class="logo">
-        <span>Santhiram Engineering College (Autonomous)- ICNDEMAC 2026</span>
-    </div>
     <div class="container">
         <h2>Conference Proceedings</h2>
         <div class="publication-box">
-            <p>All accepted papers will be published in the Scopus-indexed IEEE Xplore.</p>
+            <p>All accepted papers will be published in the IEEE Xplore which is Scopus Indexed.</p>
             <p>No change, but published papers will be available online for easy access.</p>
             <a href="#" class="btn">View Proceedings</a>
         </div>
@@ -359,7 +325,10 @@ marquee{
             <form class="email-form">
                 <input type="email" placeholder="Your Email Address" required>
                 <button type="submit">Submit for conference updates</button>
-            </form>
+            </form><br>
+            <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="width: 89%; margin: 30px 0 0 0;">
+        Designed by Viswanath Reddy, Mahesh, Bhargav, Keerthi - SREC Students under the guidance of V. Sankarnath, Asst Prof, Dept of ECE.
+     </marquee>
         </div>
     </footer>
 </body>

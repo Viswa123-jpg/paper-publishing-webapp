@@ -53,26 +53,6 @@ marquee{
   color: white;
   font-size: 1rem;
 }
-        /* Hero Section */
-          .hero {
-            background: linear-gradient(135deg, #1E293B, #3B82F6);
-            color: white;
-            padding: 100px 20px;
-            text-align: center;
-            margin: auto;
-            bottom: 7px;
-            position: relative;
-        }
-
-        .hero h1 {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 20px;
-        }
-
         /* Header */
         .header {
             background: #1E293B;
@@ -82,6 +62,8 @@ marquee{
             font-size: 24px;
             font-weight: bold;
             position: relative;
+            bottom: 6px;
+            padding-bottom: 40px;
         }
 
         .scrolling-text {
@@ -317,13 +299,6 @@ marquee{
       <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
         Welcome to Santhiram Engineering College (Autonomous)
      </marquee>
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>Welcome to the Paper Submission Portal</h1>
-        <p>Submit your research papers for the upcoming conference at SREC College Nandyal.</p>
-    </div>
-
     <!-- Header Section -->
     <div class="header">
         Ensuring a professional tone and following the specific submission format provided on the conference platform.
@@ -385,6 +360,7 @@ marquee{
     <!-- Contact Section -->
     <footer>
         <div class="contact-section">
+
             <h2 style="color: white;">Connect</h2>
             <p >Bringing scholars together for global knowledge exchange.</p>
             <div class="social-icons">
@@ -402,6 +378,9 @@ marquee{
                 <input type="email" placeholder="Your Email Address" required>
                 <button type="submit">Submit for conference updates</button>
             </form>
+             <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();" style="width: 89%; margin: 30px 0 0 0;">
+        Designed by Viswanath Reddy, Mahesh, Bhargav, Keerthi - SREC Students under the guidance of V. Sankarnath, Asst Prof, Dept of ECE.
+     </marquee>
         </div>
     </footer>
 
