@@ -39,7 +39,7 @@ app.register_blueprint(main_blueprint)
 mail_service = mail_service(
     smtp_server='smtp.gmail.com',
     smtp_port=587,
-    username='emnac2026@gmail.com',
+    username='chinnachityala66@gmail.com',
     password='hmzh dtpa raey frzs')
 
 #mail_service.send_email('viswachityala@gmail.com', 'test', 'test')

@@ -309,25 +309,12 @@ marquee{
 
     <!-- Paper Submission Form -->
     <div class="container">
-        <h2>Paper Submission Form</h2>
-        <form method="POST" enctype="multipart/form-data">
-            <label for="title">Paper Title</label>
-            <input type="text" id="title" name="title" required>
-
-            <label for="abstract">Abstract</label>
-            <textarea id="abstract" name="abstract" rows="5" required></textarea>
-
-            <label for="keywords">Keywords</label>
-            <input type="text" id="keywords" name="keywords" required>
-
-            <label for="file">Upload Paper (DOC/DOCX only)</label>
-            <input type="file" id="file" name="file" accept=".doc, .docx" required>
-
-            <button type="submit">Submit Paper</button>
-        </form>
+        <h2 style="text-align: center;">Paper Submission Form</h2>
+        <h5>Submit your Paper here :</h5>
+        <a href="https://cmt3.research.microsoft.com/ICNDEMAC2026">https://cmt3.research.microsoft.com/ICNDEMAC2026</a>
     </div>
   
-    <div class="card text-bg-light mb-3 col-sm-12 col-md-6 col-lg-6 col-12 container" style="max-width: 100rem;">
+    <div class="card text-bg-light mb-3 col-sm-12 col-md-6 col-lg-6 col-12 container" style="max-width: 100rem; text-align: justify;">
       <div class="card-header text-bg-primary card-title"><h4>Guidelines :</h4></div>
       <div class="card-body">
         <h3>For Authors</h3>
@@ -336,9 +323,15 @@ marquee{
           <li>If more than one author of an accepted paper wishes to attend the conference, all such authors need to be registered separately by paying applicable registration fee.</li>
           <li>Additional authors (other than those who are included in the manuscript submitted for review) cannot be added to the camera-ready paper.</li>
           <li>Non-refundable registration fee must be paid prior to uploading the final IEEE formatted, Camera-ready version of the paper and e-copyright form.</li>
-          <li>Camera Ready papers must adhere to less than 30% similarity score as a whole and less than 5% from a single source.</li>
+          <li>Camera Ready papers must adhere to less than 20% similarity score as a whole and less than 3% from a single source.</li>
         </ol>
-        <h3>Paper Presentation Guidelines</h3>
+        <a href="{{ url_for('static', filename='conference-template-a4.docx') }}" download class="btn btn-primary">
+  IEEE Paper Template (MsWord)
+</a><br>
+        <a href="{{ url_for('static', filename='Conference-LaTeX-template_10-17-19.zip') }}" download class="btn btn-primary" style="margin-top: 10px;">
+  IEEE Paper Template (LaTex)
+</a>
+        <h3 style="margin-top: 10px;">Paper Presentation Guidelines</h3>
         <p>Get ready to present your paper at ICNDEMAC -2026. Please Create your presentation ONLY in the Paper presentation . Template available here. Please make sure that the final number of Slides doesn’t count more than 8 (Excluding the 1st and Last Slide). A key part of the research and review process is presenting and defending your work in front of peers at the conference.</p><br>
         <p>The first step in getting ready to present your paper is to determine what key message you want to communicate to your audience. Indicon conferences are 10 minutes of Presentation followed by 2 Minutes of Q and A, so you will not have time to present all the details of your work. The objective of your presentation is to get people interested in your work, not to explain it to them fully.</p>
         <h5>Organize your talk with these tips:</h5>
@@ -351,7 +344,10 @@ marquee{
           <p>Remember that your slides do not have to tell the story on their own. Slides are meant to illustrate your work, not explain it entirely. Use graphics where possible. Limit text to phrases and bullet points, rather than full sentences. Once you have drafted your slides, record yourself practicing your talk with the slides so that you can identify areas for improvement. Be sure to stay within your time limit and leave time for questions from the audience.</p>
         </ul>
         
-        <p>* Every accepted paper can have up to 6 pages in the final PDF. If needed, additional pages (maximum 2 more additional pages apart from basic 6 pages) can be added to make the final version of the paper.</p>
+        <p>* Every accepted paper can have up to 6 pages in the final PDF. If needed, additional pages (maximum 2 more additional pages apart from basic 6 pages) can be added to make the final version of the paper.</p><br>
+         <h5 style="color:red">Note :</h5>
+        <p>The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
+        </ul>
       </div>
     </div>
 
